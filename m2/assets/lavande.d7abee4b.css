@@ -1,4 +1,4 @@
-/* Lavande — généré depuis tokens.json (version 7). Ne pas modifier à la main. */
+/* Lavande — généré depuis tokens.json (version 8). Ne pas modifier à la main. */
 
 [data-md-color-scheme="default"] {
   --lv-surface: #f7f6f9;
@@ -17,8 +17,8 @@
   --lv-slate: #aeb6d4;
   --lv-sage: #a9cbc2;
   --lv-focus: #4a5683;
-  --lv-block-def-ink: #6e5a8c;
-  --lv-block-def-bg: #ece8f1;
+  --lv-block-def-ink: #3d4a7a;
+  --lv-block-def-bg: #e1e6f4;
   --lv-block-ex-ink: #2f5f55;
   --lv-block-ex-bg: #dcece6;
   --lv-block-exo-ink: #5e4a80;
@@ -66,8 +66,8 @@
   --lv-slate: #8590b8;
   --lv-sage: #86b3a7;
   --lv-focus: #aeb6d4;
-  --lv-block-def-ink: #b9a5d6;
-  --lv-block-def-bg: #2f2840;
+  --lv-block-def-ink: #b3bde0;
+  --lv-block-def-bg: #232a3f;
   --lv-block-ex-ink: #9cc9bd;
   --lv-block-ex-bg: #1d3230;
   --lv-block-exo-ink: #cdbbe8;
@@ -155,25 +155,32 @@
   box-shadow: none; font-size: inherit; padding: .7em 1.1em .8em; margin: 1.4em 0; }
 [dir] .md-typeset .admonition-title, [dir] .md-typeset summary { background: transparent; font-weight: 700; margin: 0 0 .25em; padding: 0; border: none; }
 [dir] .md-typeset details > summary { padding-right: 1.6em; }
-.md-typeset .admonition-title::before, .md-typeset summary::before { display: none; }
+.md-typeset .admonition-title, .md-typeset summary { display: flex; align-items: center; gap: .45em; }
+[dir] .md-typeset .admonition-title::before, [dir] .md-typeset summary::before { position: static; flex: none; width: 1.1em; height: 1.1em;
+  background-color: currentColor; -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: center; mask-position: center; }
 .md-typeset details > summary { padding-right: 1.6em; }
 [dir] .md-typeset .admonition > :last-child, [dir] .md-typeset details > :last-child { margin-bottom: 0; }
 .md-typeset .admonition > .admonition-title + *, .md-typeset details > summary + * { margin-top: 0; }
 
 .md-typeset .admonition.important, .md-typeset details.important { background: var(--lv-block-ret-bg); border-left-color: var(--lv-block-ret-ink); color: var(--lv-ink); }
 .md-typeset .important > .admonition-title, .md-typeset .important > summary { color: var(--lv-block-ret-ink); background-color: transparent; }
+.md-typeset .important > .admonition-title::before, .md-typeset .important > summary::before { background-color: currentColor; -webkit-mask-image: var(--lv-icone-important); mask-image: var(--lv-icone-important); }
 .md-typeset .important > summary::after { background-color: currentColor; }
 
 .md-typeset .admonition.warning, .md-typeset details.warning { background: var(--lv-block-att-bg); border-left-color: var(--lv-block-att-ink); color: var(--lv-ink); }
 .md-typeset .warning > .admonition-title, .md-typeset .warning > summary { color: var(--lv-block-att-ink); background-color: transparent; }
+.md-typeset .warning > .admonition-title::before, .md-typeset .warning > summary::before { background-color: currentColor; -webkit-mask-image: var(--lv-icone-warning); mask-image: var(--lv-icone-warning); }
 .md-typeset .warning > summary::after { background-color: currentColor; }
 
 .md-typeset .admonition.note, .md-typeset details.note { background: var(--lv-block-ast-bg); border-left-color: var(--lv-block-ast-ink); color: var(--lv-ink); }
 .md-typeset .note > .admonition-title, .md-typeset .note > summary { color: var(--lv-block-ast-ink); background-color: transparent; }
+.md-typeset .note > .admonition-title::before, .md-typeset .note > summary::before { background-color: currentColor; -webkit-mask-image: var(--lv-icone-note); mask-image: var(--lv-icone-note); }
 .md-typeset .note > summary::after { background-color: currentColor; }
 
 .md-typeset .admonition.question, .md-typeset details.question { background: var(--lv-block-exo-bg); border-left-color: var(--lv-block-exo-ink); color: var(--lv-ink); }
 .md-typeset .question > .admonition-title, .md-typeset .question > summary { color: var(--lv-block-exo-ink); background-color: transparent; }
+.md-typeset .question > .admonition-title::before, .md-typeset .question > summary::before { background-color: currentColor; -webkit-mask-image: var(--lv-icone-question); mask-image: var(--lv-icone-question); }
 .md-typeset .question > summary::after { background-color: currentColor; }
 
 :root {
@@ -192,4 +199,8 @@
   --lv-radius-md: 12px;
   --lv-radius-lg: 20px;
   --lv-radius-pill: 999px;
+  --lv-icone-important: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z'/></svg>");
+  --lv-icone-warning: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3'/><path d='M12 9v4'/><path d='M12 17h.01'/></svg>");
+  --lv-icone-note: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4'/></svg>");
+  --lv-icone-question: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z'/><path d='m15 5 4 4'/></svg>");
 }
