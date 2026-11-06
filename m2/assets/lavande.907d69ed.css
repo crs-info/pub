@@ -183,6 +183,28 @@
 .md-typeset .question > .admonition-title::before, .md-typeset .question > summary::before { background-color: currentColor; -webkit-mask-image: var(--lv-icone-question); mask-image: var(--lv-icone-question); }
 .md-typeset .question > summary::after { background-color: currentColor; }
 
+/* Fiche algorithme : cadre line, en-tête gris lavande, fond surface (comme une ligne sur deux des tableaux), rubriques en colonne (liste de définitions) */
+.md-typeset .admonition.algorithme, .md-typeset details.algorithme { background: var(--lv-surface);
+  border: 1px solid var(--lv-line); padding: 0; overflow: hidden; color: var(--lv-ink); }
+.md-typeset .algorithme > .admonition-title, .md-typeset .algorithme > summary { background: var(--lv-block-exo-bg); color: var(--lv-ink);
+  font-size: 1.05em; padding: .55em 1.1em; margin: 0; border-bottom: 1px solid var(--lv-line); }
+.md-typeset .algorithme > .admonition-title::before, .md-typeset .algorithme > summary::before { background-color: var(--lv-primary);
+  -webkit-mask-image: var(--lv-icone-algorithme); mask-image: var(--lv-icone-algorithme); }
+.md-typeset .algorithme dl { display: grid; grid-template-columns: 7.5em 1fr; margin: 0; padding: .3em 1.1em .7em; }
+.md-typeset .algorithme dt, .md-typeset .algorithme dd { margin: 0; padding: .55em 0; border-top: 1px solid var(--lv-line); }
+.md-typeset .algorithme dt:first-of-type, .md-typeset .algorithme dt:first-of-type + dd { border-top: none; padding-top: .1em; }
+.md-typeset .algorithme dt { font-size: .74em; font-weight: 700; letter-spacing: .08em; color: var(--lv-ink-muted); padding-top: .85em; }
+.md-typeset .algorithme dt:first-of-type { padding-top: .35em; }
+.md-typeset .algorithme dd > p { margin: 0; }
+.md-typeset .algorithme dd > ul, .md-typeset .algorithme dd > ol { margin: 0; }
+.md-typeset .algorithme dd li { margin-bottom: .2em; }
+.md-typeset .algorithme dd li:last-child { margin-bottom: 0; }
+.md-typeset .algorithme :not(pre) > code { background: var(--md-default-bg-color); }
+@media screen and (max-width: 44em) {
+  .md-typeset .algorithme dl { grid-template-columns: 1fr; }
+  .md-typeset .algorithme dd { border-top: none; padding-top: .1em; }
+}
+
 :root {
   --lv-space-1: 4px;
   --lv-space-2: 8px;
@@ -202,5 +224,6 @@
   --lv-icone-important: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z'/></svg>");
   --lv-icone-warning: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3'/><path d='M12 9v4'/><path d='M12 17h.01'/></svg>");
   --lv-icone-note: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4'/></svg>");
+  --lv-icone-algorithme: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 12h11'/><path d='M10 18h11'/><path d='M10 6h11'/><path d='M4 10h2'/><path d='M4 6h1v4'/><path d='M6 18H4c0-1 2-2 2-3s-1-1.5-2-1'/></svg>");
   --lv-icone-question: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z'/><path d='m15 5 4 4'/></svg>");
 }

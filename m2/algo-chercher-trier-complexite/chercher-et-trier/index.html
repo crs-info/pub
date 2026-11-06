@@ -49,7 +49,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/lavande.d7abee4b.css">
+      <link rel="stylesheet" href="../../assets/lavande.907d69ed.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -802,22 +802,35 @@
 </ul>
 <p>Pour chaque algorithme de ce chapitre, nous donnons sa complexité.</p>
 <h2 id="4-recherche-du-minimum">4. Recherche du minimum<a class="headerlink" href="#4-recherche-du-minimum" title="Permanent link">&para;</a></h2>
-<p><strong>PROBLÈME</strong> : Nous disposons d'une liste de nombres. Nous recherchons la position du plus petit nombre.</p>
-<p><strong>ENTRÉES</strong> :</p>
+<div class="admonition algorithme">
+<p class="admonition-title">Recherche du minimum</p>
+<dl>
+<dt>PROBLÈME</dt>
+<dd>Nous disposons d'une liste de nombres. Nous recherchons la position du plus petit nombre.</dd>
+<dt>ENTRÉES</dt>
+<dd>
 <ul>
 <li>liste : une liste de nombres, non vide. Ex. <code>liste = [7, 3, 9, 2, 5]</code></li>
 </ul>
-<p><strong>SORTIE</strong> :</p>
+</dd>
+<dt>SORTIE</dt>
+<dd>
 <ul>
 <li>position_min : la position du plus petit nombre. Ex. <code>position_min = 3</code></li>
 </ul>
-<p><strong>PRINCIPE</strong> : On parcourt la liste en retenant la position du plus petit nombre vu jusqu'ici. Chaque nouveau nombre est comparé à ce plus petit. S'il est encore plus petit, on retient sa position.</p>
-<p><strong>ÉTAPES</strong> :</p>
+</dd>
+<dt>PRINCIPE</dt>
+<dd>On parcourt la liste en retenant la position du plus petit nombre vu jusqu'ici. Chaque nouveau nombre est comparé à ce plus petit. S'il est encore plus petit, on retient sa position.</dd>
+<dt>ÉTAPES</dt>
+<dd>
 <ol>
 <li>Retenir la position 0 comme position du plus petit nombre.</li>
 <li>Pour chaque position suivante, de 1 jusqu'à la dernière : comparer le nombre à cette position avec le plus petit nombre retenu. S'il est plus petit, alors retenir cette position.</li>
 <li>Renvoyer la position retenue.</li>
 </ol>
+</dd>
+</dl>
+</div>
 <p><strong>Exemple</strong> avec la liste <code>[7, 3, 9, 2, 5]</code> :</p>
 <table>
 <thead>
@@ -899,22 +912,35 @@
 </table>
 <p>Quand la liste est deux fois plus longue, il y a environ <strong>2 fois plus</strong> de comparaisons : on parle alors de <strong>complexité O(n)</strong>, le travail grandit au même rythme que la liste.</p>
 <h2 id="5-recherche-dans-une-liste-non-triee">5. Recherche dans une liste non triée<a class="headerlink" href="#5-recherche-dans-une-liste-non-triee" title="Permanent link">&para;</a></h2>
-<p><strong>PROBLÈME</strong> : Nous disposons d'une liste de nombres, dans n'importe quel ordre, et d'un nombre cherché. Nous recherchons la position de ce nombre. S'il apparaît plusieurs fois, nous voulons la première position. S'il est absent, nous voulons −1.</p>
-<p><strong>ENTRÉES</strong> :</p>
+<div class="admonition algorithme">
+<p class="admonition-title">Recherche dans une liste non triée</p>
+<dl>
+<dt>PROBLÈME</dt>
+<dd>Nous disposons d'une liste de nombres, dans n'importe quel ordre, et d'un nombre cherché. Nous recherchons la position de ce nombre. S'il apparaît plusieurs fois, nous voulons la première position. S'il est absent, nous voulons −1.</dd>
+<dt>ENTRÉES</dt>
+<dd>
 <ul>
 <li>liste : une liste de nombres. Ex. <code>liste = [8, 3, 6, 1, 9, 4]</code></li>
 <li>valeur : le nombre recherché. Ex. <code>valeur = 9</code></li>
 </ul>
-<p><strong>SORTIE</strong> :</p>
+</dd>
+<dt>SORTIE</dt>
+<dd>
 <ul>
 <li>position : la première position de valeur dans liste, ou −1 si elle est absente. Ex. <code>position = 4</code> (avec <code>valeur = 7</code>, on obtiendrait <code>position = -1</code>)</li>
 </ul>
-<p><strong>PRINCIPE</strong> : On regarde les nombres un par un, depuis le début. Dès qu'on trouve le nombre cherché, on s'arrête. Si on arrive au bout sans le trouver, il est absent.</p>
-<p><strong>ÉTAPES</strong> :</p>
+</dd>
+<dt>PRINCIPE</dt>
+<dd>On regarde les nombres un par un, depuis le début. Dès qu'on trouve le nombre cherché, on s'arrête. Si on arrive au bout sans le trouver, il est absent.</dd>
+<dt>ÉTAPES</dt>
+<dd>
 <ol>
 <li>Pour chaque position, de 0 jusqu'à la dernière : si le nombre à cette position est égal à valeur, alors renvoyer cette position.</li>
 <li>Renvoyer −1.</li>
 </ol>
+</dd>
+</dl>
+</div>
 <p><strong>Exemples</strong> avec la liste <code>[8, 3, 6, 1, 9, 4]</code> :</p>
 <ul>
 <li>On cherche 9 : on compare 8, 3, 6, 1, puis 9. Résultat : position 4, après <strong>5 comparaisons</strong>.</li>
@@ -954,18 +980,28 @@
 <h3 id="lintuition-du-dictionnaire">L'intuition du dictionnaire<a class="headerlink" href="#lintuition-du-dictionnaire" title="Permanent link">&para;</a></h3>
 <p>Pour chercher un mot dans un dictionnaire, personne ne lit toutes les pages depuis le début. On ouvre le dictionnaire vers le milieu, on regarde un mot, et on sait aussitôt si le mot cherché est avant ou après. On ne garde que la bonne moitié, et on recommence.</p>
 <p>Cette méthode fonctionne parce que le dictionnaire est <strong>trié</strong>. Elle s'appelle la <strong>recherche dichotomique</strong> (« dichotomie » veut dire « couper en deux »).</p>
-<p><strong>PROBLÈME</strong> : Nous disposons d'une liste de nombres triée par ordre croissant et d'un nombre cherché. Nous recherchons une position de ce nombre dans la liste, ou −1 s'il est absent.</p>
-<p><strong>ENTRÉES</strong> :</p>
+<div class="admonition algorithme">
+<p class="admonition-title">Recherche dichotomique</p>
+<dl>
+<dt>PROBLÈME</dt>
+<dd>Nous disposons d'une liste de nombres triée par ordre croissant et d'un nombre cherché. Nous recherchons une position de ce nombre dans la liste, ou −1 s'il est absent.</dd>
+<dt>ENTRÉES</dt>
+<dd>
 <ul>
 <li>liste : une liste de nombres triée par ordre croissant. Ex. <code>liste = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35, 38, 41, 44, 47]</code></li>
 <li>valeur : le nombre recherché. Ex. <code>valeur = 47</code></li>
 </ul>
-<p><strong>SORTIE</strong> :</p>
+</dd>
+<dt>SORTIE</dt>
+<dd>
 <ul>
 <li>position : une position de valeur dans liste, ou −1 si elle est absente. Ex. <code>position = 15</code></li>
 </ul>
-<p><strong>PRINCIPE</strong> : On garde en mémoire une zone de recherche, délimitée par une position de début et une position de fin. On regarde le nombre au milieu de la zone. S'il est égal au nombre cherché, c'est fini. S'il est plus petit, le nombre cherché ne peut être qu'à droite : on garde la moitié droite. S'il est plus grand, on garde la moitié gauche. Si la zone devient vide, le nombre est absent.</p>
-<p><strong>ÉTAPES</strong> :</p>
+</dd>
+<dt>PRINCIPE</dt>
+<dd>On garde en mémoire une zone de recherche, délimitée par une position de début et une position de fin. On regarde le nombre au milieu de la zone. S'il est égal au nombre cherché, c'est fini. S'il est plus petit, le nombre cherché ne peut être qu'à droite : on garde la moitié droite. S'il est plus grand, on garde la moitié gauche. Si la zone devient vide, le nombre est absent.</dd>
+<dt>ÉTAPES</dt>
+<dd>
 <ol>
 <li>Retenir début = 0 et fin = la dernière position de la liste.</li>
 <li>Si début est plus grand que fin, alors la zone est vide : renvoyer −1.</li>
@@ -975,6 +1011,9 @@
 <li>Sinon, retenir fin = milieu − 1 (on garde la moitié gauche).</li>
 <li>Recommencer à l'étape 2.</li>
 </ol>
+</dd>
+</dl>
+</div>
 <p><strong>Exemple</strong> : on cherche 47 dans cette liste de 16 nombres.</p>
 <table>
 <thead>
@@ -1130,17 +1169,27 @@
 </div>
 <h2 id="7-le-tri-par-selection">7. Le tri par sélection<a class="headerlink" href="#7-le-tri-par-selection" title="Permanent link">&para;</a></h2>
 <p>La dichotomie est très rapide, à condition que la liste soit triée. Il faut donc savoir trier, et savoir combien cela coûte.</p>
-<p><strong>PROBLÈME</strong> : Nous disposons d'une liste de nombres dans n'importe quel ordre. Nous recherchons la même liste, triée par ordre croissant.</p>
-<p><strong>ENTRÉES</strong> :</p>
+<div class="admonition algorithme">
+<p class="admonition-title">Tri par sélection</p>
+<dl>
+<dt>PROBLÈME</dt>
+<dd>Nous disposons d'une liste de nombres dans n'importe quel ordre. Nous recherchons la même liste, triée par ordre croissant.</dd>
+<dt>ENTRÉES</dt>
+<dd>
 <ul>
 <li>liste : une liste de nombres. Ex. <code>liste = [6, 2, 1, 5, 4, 3]</code></li>
 </ul>
-<p><strong>SORTIE</strong> :</p>
+</dd>
+<dt>SORTIE</dt>
+<dd>
 <ul>
 <li>liste : la même liste, triée par ordre croissant. Ex. <code>liste = [1, 2, 3, 4, 5, 6]</code></li>
 </ul>
-<p><strong>PRINCIPE</strong> : On cherche le plus petit nombre de la liste et on le place en première position. Puis on cherche le plus petit parmi les nombres restants et on le place en deuxième position. Et ainsi de suite. C'est la <strong>recherche du minimum</strong>, répétée sur une partie de plus en plus petite de la liste.</p>
-<p><strong>ÉTAPES</strong> :</p>
+</dd>
+<dt>PRINCIPE</dt>
+<dd>On cherche le plus petit nombre de la liste et on le place en première position. Puis on cherche le plus petit parmi les nombres restants et on le place en deuxième position. Et ainsi de suite. C'est la <strong>recherche du minimum</strong>, répétée sur une partie de plus en plus petite de la liste.</dd>
+<dt>ÉTAPES</dt>
+<dd>
 <ol>
 <li>Retenir la position courante = 0.</li>
 <li>Chercher la position du plus petit nombre parmi les nombres situés entre la position courante et la fin de la liste (recherche du minimum).</li>
@@ -1148,6 +1197,9 @@
 <li>Avancer la position courante de 1.</li>
 <li>Recommencer à l'étape 2 tant qu'il reste au moins deux nombres entre la position courante et la fin de la liste.</li>
 </ol>
+</dd>
+</dl>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
 <p>On n'échange <strong>qu'une fois par tour</strong>, après avoir trouvé le plus petit. On n'échange pas à chaque fois qu'on rencontre un nombre plus petit.</p>
@@ -1253,18 +1305,28 @@
 <h2 id="8-le-tri-par-fusion">8. Le tri par fusion<a class="headerlink" href="#8-le-tri-par-fusion" title="Permanent link">&para;</a></h2>
 <h3 id="fusionner-deux-listes-triees">Fusionner deux listes triées<a class="headerlink" href="#fusionner-deux-listes-triees" title="Permanent link">&para;</a></h3>
 <p>Le tri par fusion repose sur une opération simple : <strong>fusionner</strong> deux listes déjà triées pour obtenir une seule liste triée.</p>
-<p><strong>PROBLÈME</strong> : Nous disposons de deux listes triées par ordre croissant. Nous recherchons une seule liste triée qui contient tous leurs nombres.</p>
-<p><strong>ENTRÉES</strong> :</p>
+<div class="admonition algorithme">
+<p class="admonition-title">Fusion de deux listes triées</p>
+<dl>
+<dt>PROBLÈME</dt>
+<dd>Nous disposons de deux listes triées par ordre croissant. Nous recherchons une seule liste triée qui contient tous leurs nombres.</dd>
+<dt>ENTRÉES</dt>
+<dd>
 <ul>
 <li>gauche : une liste triée par ordre croissant. Ex. <code>gauche = [2, 5, 8]</code></li>
 <li>droite : une liste triée par ordre croissant. Ex. <code>droite = [3, 4, 9]</code></li>
 </ul>
-<p><strong>SORTIE</strong> :</p>
+</dd>
+<dt>SORTIE</dt>
+<dd>
 <ul>
 <li>resultat : une liste triée qui contient tous les nombres de gauche et de droite. Ex. <code>resultat = [2, 3, 4, 5, 8, 9]</code></li>
 </ul>
-<p><strong>PRINCIPE</strong> : Le plus petit nombre de chaque liste est son premier nombre. On compare les deux premiers, on prend le plus petit et on le place à la fin du résultat. On recommence jusqu'à ce qu'une des deux listes soit vide. Les nombres qui restent dans l'autre liste sont déjà dans l'ordre : on les ajoute à la fin.</p>
-<p><strong>ÉTAPES</strong> :</p>
+</dd>
+<dt>PRINCIPE</dt>
+<dd>Le plus petit nombre de chaque liste est son premier nombre. On compare les deux premiers, on prend le plus petit et on le place à la fin du résultat. On recommence jusqu'à ce qu'une des deux listes soit vide. Les nombres qui restent dans l'autre liste sont déjà dans l'ordre : on les ajoute à la fin.</dd>
+<dt>ÉTAPES</dt>
+<dd>
 <ol>
 <li>Commencer avec une liste resultat vide.</li>
 <li>Comparer le premier nombre de gauche et le premier nombre de droite.</li>
@@ -1273,6 +1335,9 @@
 <li>Ajouter à la fin de resultat les nombres qui restent, dans l'ordre.</li>
 <li>Renvoyer resultat.</li>
 </ol>
+</dd>
+</dl>
+</div>
 <p><strong>Exemple</strong> : fusionner <code>[2, 5, 8]</code> et <code>[3, 4, 9]</code>.</p>
 <table>
 <thead>
@@ -1324,23 +1389,36 @@
 </table>
 <p>Bilan : <strong>5 comparaisons</strong> pour 6 nombres. Fusionner deux listes demande au plus une comparaison par nombre placé.</p>
 <h3 id="trier-en-fusionnant">Trier en fusionnant<a class="headerlink" href="#trier-en-fusionnant" title="Permanent link">&para;</a></h3>
-<p><strong>PROBLÈME</strong> : Nous disposons d'une liste de nombres dans n'importe quel ordre. Nous recherchons la même liste, triée par ordre croissant.</p>
-<p><strong>ENTRÉES</strong> :</p>
+<div class="admonition algorithme">
+<p class="admonition-title">Tri par fusion</p>
+<dl>
+<dt>PROBLÈME</dt>
+<dd>Nous disposons d'une liste de nombres dans n'importe quel ordre. Nous recherchons la même liste, triée par ordre croissant.</dd>
+<dt>ENTRÉES</dt>
+<dd>
 <ul>
 <li>liste : une liste de nombres. Ex. <code>liste = [6, 2, 7, 1, 5, 8, 3, 4]</code></li>
 </ul>
-<p><strong>SORTIE</strong> :</p>
+</dd>
+<dt>SORTIE</dt>
+<dd>
 <ul>
 <li>liste_triee : les mêmes nombres, triés par ordre croissant. Ex. <code>liste_triee = [1, 2, 3, 4, 5, 6, 7, 8]</code></li>
 </ul>
-<p><strong>PRINCIPE</strong> : Une liste d'un seul nombre est toujours triée. On sépare donc la liste en listes d'un seul nombre. Puis on les fusionne deux par deux : on obtient des listes triées de 2 nombres, puis de 4, puis de 8, jusqu'à n'avoir plus qu'une seule liste.</p>
-<p><strong>ÉTAPES</strong> :</p>
+</dd>
+<dt>PRINCIPE</dt>
+<dd>Une liste d'un seul nombre est toujours triée. On sépare donc la liste en listes d'un seul nombre. Puis on les fusionne deux par deux : on obtient des listes triées de 2 nombres, puis de 4, puis de 8, jusqu'à n'avoir plus qu'une seule liste.</dd>
+<dt>ÉTAPES</dt>
+<dd>
 <ol>
 <li>Séparer la liste en listes d'un seul nombre.</li>
 <li>Fusionner les listes deux par deux, dans l'ordre. Si une liste reste seule, la garder telle quelle pour le niveau suivant.</li>
 <li>Recommencer à l'étape 2 tant qu'il reste plus d'une liste.</li>
 <li>Renvoyer la liste qui reste.</li>
 </ol>
+</dd>
+</dl>
+</div>
 <p><strong>Exemple</strong> avec la liste <code>[6, 2, 7, 1, 5, 8, 3, 4]</code> :</p>
 <table>
 <thead>
@@ -1676,18 +1754,28 @@
 <p>Dans la notation O, on n'écrit pas la base : on note simplement <strong>O(log n)</strong>.</p>
 <h2 id="12-exercice-sur-la-strategie-gloutonne-le-rendu-de-monnaie">12. Exercice sur la stratégie gloutonne : le rendu de monnaie<a class="headerlink" href="#12-exercice-sur-la-strategie-gloutonne-le-rendu-de-monnaie" title="Permanent link">&para;</a></h2>
 <p>Un caissier doit rendre de la monnaie. Il veut rendre le montant exact avec le moins de pièces et de billets possible. Une idée simple : rendre à chaque fois la plus grande pièce possible. C'est une <strong>approche gloutonne</strong> (section 10).</p>
-<p><strong>PROBLÈME</strong> : Nous disposons d'un système de monnaie (les valeurs des pièces et des billets) et d'un montant à rendre. Nous recherchons les pièces et billets à rendre.</p>
-<p><strong>ENTRÉES</strong> :</p>
+<div class="admonition algorithme">
+<p class="admonition-title">Rendu de monnaie</p>
+<dl>
+<dt>PROBLÈME</dt>
+<dd>Nous disposons d'un système de monnaie (les valeurs des pièces et des billets) et d'un montant à rendre. Nous recherchons les pièces et billets à rendre.</dd>
+<dt>ENTRÉES</dt>
+<dd>
 <ul>
 <li>systeme : la liste des valeurs des pièces et billets disponibles. Ex. <code>systeme = [50, 20, 10, 5, 2, 1]</code></li>
 <li>montant : le montant à rendre. Ex. <code>montant = 38</code></li>
 </ul>
-<p><strong>SORTIE</strong> :</p>
+</dd>
+<dt>SORTIE</dt>
+<dd>
 <ul>
 <li>rendu : la liste des pièces et billets à rendre, ou « impossible » si on ne peut pas rendre le montant exact. Ex. <code>rendu = [20, 10, 5, 2, 1]</code></li>
 </ul>
-<p><strong>PRINCIPE</strong> : On commence par la plus grande valeur. Tant qu'elle ne dépasse pas le montant restant, on la rend et on la retire du montant. Quand elle dépasse, on passe à la valeur suivante, plus petite. À la fin, si le montant restant vaut 0, on a réussi.</p>
-<p><strong>ÉTAPES</strong> :</p>
+</dd>
+<dt>PRINCIPE</dt>
+<dd>On commence par la plus grande valeur. Tant qu'elle ne dépasse pas le montant restant, on la rend et on la retire du montant. Quand elle dépasse, on passe à la valeur suivante, plus petite. À la fin, si le montant restant vaut 0, on a réussi.</dd>
+<dt>ÉTAPES</dt>
+<dd>
 <ol>
 <li>Ranger les valeurs de systeme de la plus grande à la plus petite. Retenir rendu = une liste vide.</li>
 <li>Prendre la plus grande valeur.</li>
@@ -1695,6 +1783,9 @@
 <li>Sinon, passer à la valeur suivante. Recommencer à l'étape 3 tant qu'il reste des valeurs.</li>
 <li>Si le montant restant vaut 0, alors renvoyer rendu. Sinon, renvoyer « impossible ».</li>
 </ol>
+</dd>
+</dl>
+</div>
 <p><strong>Exemple</strong> avec <code>systeme = [50, 20, 10, 5, 2, 1]</code> et <code>montant = 38</code> :</p>
 <table>
 <thead>
