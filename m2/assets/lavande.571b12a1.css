@@ -1,4 +1,4 @@
-/* Lavande — généré depuis tokens.json (version 6). Ne pas modifier à la main. */
+/* Lavande — généré depuis tokens.json (version 7). Ne pas modifier à la main. */
 
 [data-md-color-scheme="default"] {
   --lv-surface: #f7f6f9;
@@ -17,8 +17,8 @@
   --lv-slate: #aeb6d4;
   --lv-sage: #a9cbc2;
   --lv-focus: #4a5683;
-  --lv-block-def-ink: #3d4a7a;
-  --lv-block-def-bg: #e1e6f4;
+  --lv-block-def-ink: #6e5a8c;
+  --lv-block-def-bg: #ece8f1;
   --lv-block-ex-ink: #2f5f55;
   --lv-block-ex-bg: #dcece6;
   --lv-block-exo-ink: #5e4a80;
@@ -27,9 +27,8 @@
   --lv-block-att-bg: #f6e8c9;
   --lv-block-ast-ink: #4f4a60;
   --lv-block-ast-bg: #e9e7ef;
-  --lv-block-ret-bg: #6e5a8c;
-  --lv-block-ret-ink: #ffffff;
-  --lv-block-ret-text: #ffffff;
+  --lv-block-ret-bg: #e1e6f4;
+  --lv-block-ret-ink: #3d4a7a;
   --lv-answer-ok-ink: #2f5f55;
   --lv-answer-ok-bg: #e4f1ec;
   --lv-answer-ok-line: #9fc9b9;
@@ -67,8 +66,8 @@
   --lv-slate: #8590b8;
   --lv-sage: #86b3a7;
   --lv-focus: #aeb6d4;
-  --lv-block-def-ink: #b3bde0;
-  --lv-block-def-bg: #232a3f;
+  --lv-block-def-ink: #b9a5d6;
+  --lv-block-def-bg: #2f2840;
   --lv-block-ex-ink: #9cc9bd;
   --lv-block-ex-bg: #1d3230;
   --lv-block-exo-ink: #cdbbe8;
@@ -77,9 +76,8 @@
   --lv-block-att-bg: #33291a;
   --lv-block-ast-ink: #c9c4d8;
   --lv-block-ast-bg: #28262f;
-  --lv-block-ret-bg: #b9a5d6;
-  --lv-block-ret-ink: #231c30;
-  --lv-block-ret-text: #231c30;
+  --lv-block-ret-bg: #232a3f;
+  --lv-block-ret-ink: #b3bde0;
   --lv-answer-ok-ink: #9cd3c0;
   --lv-answer-ok-bg: #1c302a;
   --lv-answer-ok-line: #3a6355;
@@ -162,8 +160,8 @@
 [dir] .md-typeset .admonition > :last-child, [dir] .md-typeset details > :last-child { margin-bottom: 0; }
 .md-typeset .admonition > .admonition-title + *, .md-typeset details > summary + * { margin-top: 0; }
 
-.md-typeset .admonition.important, .md-typeset details.important { background: var(--lv-block-def-bg); border: 2px solid var(--lv-block-def-ink); border-left: calc(var(--lv-block-bar) + 2px) solid var(--lv-block-def-ink); color: var(--lv-ink); }
-.md-typeset .important > .admonition-title, .md-typeset .important > summary { color: var(--lv-block-def-ink); background-color: transparent; text-transform: uppercase; letter-spacing: .08em; font-size: .8em; }
+.md-typeset .admonition.important, .md-typeset details.important { background: var(--lv-block-ret-bg); border-left-color: var(--lv-block-ret-ink); color: var(--lv-ink); }
+.md-typeset .important > .admonition-title, .md-typeset .important > summary { color: var(--lv-block-ret-ink); background-color: transparent; }
 .md-typeset .important > summary::after { background-color: currentColor; }
 
 .md-typeset .admonition.warning, .md-typeset details.warning { background: var(--lv-block-att-bg); border-left-color: var(--lv-block-att-ink); color: var(--lv-ink); }
