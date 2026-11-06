@@ -162,8 +162,8 @@
 [dir] .md-typeset .admonition > :last-child, [dir] .md-typeset details > :last-child { margin-bottom: 0; }
 .md-typeset .admonition > .admonition-title + *, .md-typeset details > summary + * { margin-top: 0; }
 
-.md-typeset .admonition.important, .md-typeset details.important { background: var(--lv-primary-soft); border-left-color: var(--lv-primary); color: var(--lv-ink); }
-.md-typeset .important > .admonition-title, .md-typeset .important > summary { color: var(--lv-primary); background-color: transparent; }
+.md-typeset .admonition.important, .md-typeset details.important { background: var(--lv-block-def-bg); border: 2px solid var(--lv-block-def-ink); border-left: calc(var(--lv-block-bar) + 2px) solid var(--lv-block-def-ink); color: var(--lv-ink); }
+.md-typeset .important > .admonition-title, .md-typeset .important > summary { color: var(--lv-block-def-ink); background-color: transparent; text-transform: uppercase; letter-spacing: .08em; font-size: .8em; }
 .md-typeset .important > summary::after { background-color: currentColor; }
 
 .md-typeset .admonition.warning, .md-typeset details.warning { background: var(--lv-block-att-bg); border-left-color: var(--lv-block-att-ink); color: var(--lv-ink); }
