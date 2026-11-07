@@ -726,49 +726,38 @@
 </ul>
 <p>Pour chacun, nous comptons le travail effectué, puis nous regardons comment ce travail grandit quand la liste grandit. Enfin, nous classons ces algorithmes selon la <strong>stratégie</strong> qu'ils utilisent.</p>
 <h2 id="2-decrire-un-algorithme-en-francais">2. Décrire un algorithme en français<a class="headerlink" href="#2-decrire-un-algorithme-en-francais" title="Permanent link">&para;</a></h2>
-<p>Un <strong>algorithme</strong> est une suite d'étapes précises qui résout un problème. Nous le décrivons avec cinq rubriques.</p>
-<table>
-<thead>
-<tr>
-<th>Rubrique</th>
-<th>Contenu</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PROBLÈME</td>
-<td>Le problème en langage courant : « Nous disposons de… Nous recherchons… »</td>
-</tr>
-<tr>
-<td>ENTRÉES</td>
-<td>Les données dont l'algorithme a besoin</td>
-</tr>
-<tr>
-<td>SORTIE</td>
-<td>Le résultat que l'algorithme donne</td>
-</tr>
-<tr>
-<td>PRINCIPE</td>
-<td>L'idée de l'algorithme, en quelques phrases</td>
-</tr>
-<tr>
-<td>ÉTAPES</td>
-<td>La liste numérotée des actions à faire, dans l'ordre</td>
-</tr>
-</tbody>
-</table>
+<p>Un <strong>algorithme</strong> est une suite d'étapes précises qui résout un problème. Nous le décrivons dans une fiche, avec cinq rubriques. Tous les algorithmes de ce chapitre sont présentés de cette manière.</p>
+<div class="admonition algorithme">
+<p class="admonition-title">Les cinq rubriques d'un algorithme</p>
+<dl>
+<dt>PROBLÈME</dt>
+<dd>Le problème en langage courant : « Nous disposons de… Nous recherchons… »</dd>
+<dt>ENTRÉES</dt>
+<dd>Les données dont l'algorithme a besoin.</dd>
+<dt>SORTIE</dt>
+<dd>Le résultat que l'algorithme donne.</dd>
+<dt>PRINCIPE</dt>
+<dd>L'idée de l'algorithme, en quelques phrases.</dd>
+<dt>ÉTAPES</dt>
+<dd>La liste numérotée des actions à faire, dans l'ordre.</dd>
+</dl>
+</div>
 <p>Pour chaque entrée et chaque sortie, on donne son nom, sa description et un exemple de valeur, écrit sous la forme <code>nom = valeur</code>. Par exemple :</p>
 <ul>
 <li>liste : une liste de nombres. Ex. <code>liste = [3, 5, 1, 6, 2]</code></li>
 <li>valeur : le nombre recherché. Ex. <code>valeur = 5</code></li>
 </ul>
-<p>Les étapes sont écrites en français, mais de façon précise. Nous utilisons toujours les mêmes tournures :</p>
+<p>Les étapes sont écrites en français, mais de façon précise. Nous utilisons souvent les mêmes tournures :</p>
 <ul>
+<li>« Retenir x = … » : donner une valeur à x, ou changer sa valeur ;</li>
 <li>« Pour chaque… » : répéter une action pour tous les éléments ;</li>
 <li>« Si…, alors… » : faire une action seulement si une condition est vraie ;</li>
-<li>« Recommencer à l'étape N tant que… » : répéter une partie de l'algorithme ;</li>
+<li>« Sinon, … » : faire une action quand la condition du « Si » est fausse ;</li>
+<li>« Revenir à l'étape N » : reprendre l'algorithme à l'étape N ;</li>
+<li>« Recommencer à l'étape N tant que… » : répéter une partie de l'algorithme tant qu'une condition est vraie ;</li>
 <li>« Renvoyer… » : donner le résultat et s'arrêter.</li>
 </ul>
+<p>Cette liste n'est pas exhaustive : d'autres formulations sont possibles, à condition de rester précis.</p>
 <div class="admonition important">
 <p class="admonition-title">À retenir</p>
 <p>Une étape = une action. Chaque répétition doit dire <strong>quand elle s'arrête</strong>.</p>
@@ -802,6 +791,7 @@
 </ul>
 <p>Pour chaque algorithme de ce chapitre, nous donnons sa complexité.</p>
 <h2 id="4-recherche-du-minimum">4. Recherche du minimum<a class="headerlink" href="#4-recherche-du-minimum" title="Permanent link">&para;</a></h2>
+<p>Commençons par un problème simple : trouver le plus petit nombre d'une liste. Sur cinq nombres, on le voit d'un coup d'œil. Un ordinateur, lui, doit regarder les nombres un par un et les comparer. Cet algorithme servira plus loin de brique pour le tri par sélection.</p>
 <div class="admonition algorithme">
 <p class="admonition-title">Recherche du minimum</p>
 <dl>
@@ -912,6 +902,7 @@
 </table>
 <p>Quand la liste est deux fois plus longue, il y a environ <strong>2 fois plus</strong> de comparaisons : on parle alors de <strong>complexité O(n)</strong>, le travail grandit au même rythme que la liste.</p>
 <h2 id="5-recherche-dans-une-liste-non-triee">5. Recherche dans une liste non triée<a class="headerlink" href="#5-recherche-dans-une-liste-non-triee" title="Permanent link">&para;</a></h2>
+<p>On cherche maintenant un nombre précis dans une liste, par exemple un numéro dans une liste d'inscrits. On veut savoir s'il est présent et à quelle position. Si la liste n'est pas triée, on n'a aucune indication sur l'endroit où regarder.</p>
 <div class="admonition algorithme">
 <p class="admonition-title">Recherche dans une liste non triée</p>
 <dl>
@@ -1389,6 +1380,7 @@
 </table>
 <p>Bilan : <strong>5 comparaisons</strong> pour 6 nombres. Fusionner deux listes demande au plus une comparaison par nombre placé.</p>
 <h3 id="trier-en-fusionnant">Trier en fusionnant<a class="headerlink" href="#trier-en-fusionnant" title="Permanent link">&para;</a></h3>
+<p>La fusion permet maintenant de trier une liste entière. On ne cherche plus le plus petit nombre de toute la liste, comme dans le tri par sélection. On découpe la liste en tout petits morceaux, puis on les recolle deux par deux en les fusionnant.</p>
 <div class="admonition algorithme">
 <p class="admonition-title">Tri par fusion</p>
 <dl>
@@ -1664,7 +1656,7 @@
 <h3 id="lapproche-gloutonne">L'approche gloutonne<a class="headerlink" href="#lapproche-gloutonne" title="Permanent link">&para;</a></h3>
 <p><strong>Idée</strong> : à chaque étape, faire le choix qui paraît le meilleur <strong>maintenant</strong>, et ne jamais revenir dessus.</p>
 <ul>
-<li>Tri par sélection : à chaque tour, on prend le plus petit nombre restant et on le place définitivement. On ne le déplace plus jamais.</li>
+<li>Tri par sélection : à chaque tour, on prend le plus petit nombre restant et on le place définitivement. Il n'est plus jamais échangé.</li>
 <li>Rendu de monnaie (section 12) : à chaque étape, on rend la plus grande pièce possible.</li>
 </ul>
 <p><strong>Avantage</strong> : c'est simple et souvent rapide.</p>
@@ -1688,7 +1680,6 @@
 <th>Stratégie</th>
 <th>Idée</th>
 <th>Exemples du chapitre</th>
-<th>Complexité</th>
 </tr>
 </thead>
 <tbody>
@@ -1696,22 +1687,20 @@
 <td>Force brute</td>
 <td>Tout examiner</td>
 <td>Recherche du minimum, recherche dans une liste non triée</td>
-<td>O(n)</td>
 </tr>
 <tr>
 <td>Gloutonne</td>
 <td>Le meilleur choix maintenant, sans retour</td>
-<td>Tri par sélection</td>
-<td>O(n²)</td>
+<td>Tri par sélection, rendu de monnaie</td>
 </tr>
 <tr>
 <td>Diviser pour régner</td>
 <td>Couper en deux, résoudre, combiner</td>
 <td>Dichotomie, tri par fusion</td>
-<td>O(log n), O(n log n)</td>
 </tr>
 </tbody>
 </table>
+<p>La complexité dépend de l'algorithme, pas seulement de la stratégie. Par exemple, la force brute est en O(n) pour chercher dans une liste, mais elle devient très lente pour trouver un code secret : chaque chiffre de plus multiplie le nombre d'essais par 10.</p>
 <div class="admonition important">
 <p class="admonition-title">À retenir</p>
 <p>Une stratégie n'est pas un algorithme : c'est une <strong>façon de chercher</strong> un algorithme. Un même problème peut être résolu avec plusieurs stratégies. Pour trier, on peut choisir la sélection (gloutonne, O(n²)) ou la fusion (diviser pour régner, O(n log n)). Le choix de la stratégie change beaucoup l'efficacité.</p>
@@ -1763,7 +1752,7 @@
 <dd>
 <ul>
 <li>systeme : la liste des valeurs des pièces et billets disponibles. Ex. <code>systeme = [50, 20, 10, 5, 2, 1]</code></li>
-<li>montant : le montant à rendre. Ex. <code>montant = 38</code></li>
+<li>montant : le montant à rendre (il diminue à chaque pièce rendue). Ex. <code>montant = 38</code></li>
 </ul>
 </dd>
 <dt>SORTIE</dt>
@@ -1777,11 +1766,18 @@
 <dt>ÉTAPES</dt>
 <dd>
 <ol>
-<li>Ranger les valeurs de systeme de la plus grande à la plus petite. Retenir rendu = une liste vide.</li>
-<li>Prendre la plus grande valeur.</li>
-<li>Si cette valeur est plus petite ou égale au montant restant, alors l'ajouter à rendu, la soustraire du montant restant et recommencer à l'étape 3.</li>
-<li>Sinon, passer à la valeur suivante. Recommencer à l'étape 3 tant qu'il reste des valeurs.</li>
-<li>Si le montant restant vaut 0, alors renvoyer rendu. Sinon, renvoyer « impossible ».</li>
+<li>Ranger les valeurs de systeme de la plus grande à la plus petite.</li>
+<li>Retenir rendu = une liste vide.</li>
+<li>Retenir valeur = la plus grande valeur de systeme.</li>
+<li>Si valeur est plus grande que montant, alors passer à l'étape 8.</li>
+<li>Ajouter valeur à la fin de rendu.</li>
+<li>Retenir montant = montant − valeur.</li>
+<li>Revenir à l'étape 4.</li>
+<li>Si valeur est la plus petite valeur de systeme, alors passer à l'étape 11.</li>
+<li>Retenir valeur = la valeur suivante de systeme.</li>
+<li>Revenir à l'étape 4.</li>
+<li>Si montant vaut 0, alors renvoyer rendu.</li>
+<li>Sinon, renvoyer « impossible ».</li>
 </ol>
 </dd>
 </dl>
