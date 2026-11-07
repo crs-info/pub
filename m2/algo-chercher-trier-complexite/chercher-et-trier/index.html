@@ -1444,7 +1444,7 @@
 </tbody>
 </table>
 <p>Bilan : <strong>16 comparaisons</strong>. Le tri par sélection en demande 28 pour 8 nombres.</p>
-<p><strong>Exemple avec un nombre impair</strong> : la liste <code>[5, 3, 8, 1, 9, 2, 6]</code> contient 7 nombres. À certains niveaux, une liste reste seule : on la garde telle quelle pour le niveau suivant.</p>
+<p><strong>Exemple avec un nombre impair</strong> : la liste <code>[7, 4, 9, 1, 6, 3, 8, 2, 5]</code> contient 9 nombres. À chaque niveau, la dernière liste reste seule : on la garde telle quelle pour le niveau suivant.</p>
 <table>
 <thead>
 <tr>
@@ -1456,27 +1456,32 @@
 <tbody>
 <tr>
 <td>Séparation</td>
-<td>[5] [3] [8] [1] [9] [2] [6]</td>
+<td>[7] [4] [9] [1] [6] [3] [8] [2] [5]</td>
 <td>—</td>
 </tr>
 <tr>
 <td>1</td>
-<td>[3, 5] [1, 8] [2, 9] [6]</td>
-<td>1 + 1 + 1 = 3 ([6] reste seule)</td>
+<td>[4, 7] [1, 9] [3, 6] [2, 8] [5]</td>
+<td>1 + 1 + 1 + 1 = 4 ([5] reste seule)</td>
 </tr>
 <tr>
 <td>2</td>
-<td>[1, 3, 5, 8] [2, 6, 9]</td>
-<td>3 + 2 = 5</td>
+<td>[1, 4, 7, 9] [2, 3, 6, 8] [5]</td>
+<td>3 + 3 = 6 ([5] reste seule)</td>
 </tr>
 <tr>
 <td>3</td>
-<td>[1, 2, 3, 5, 6, 8, 9]</td>
-<td>6</td>
+<td>[1, 2, 3, 4, 6, 7, 8, 9] [5]</td>
+<td>7 ([5] reste seule)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>[1, 2, 3, 4, 5, 6, 7, 8, 9]</td>
+<td>5</td>
 </tr>
 </tbody>
 </table>
-<p>Bilan : <strong>14 comparaisons</strong> et 3 niveaux, comme pour 8 nombres.</p>
+<p>Bilan : <strong>22 comparaisons</strong> et 4 niveaux : un nombre de plus que 8 demande un niveau de plus.</p>
 <p><strong>Travail</strong> :</p>
 <ul>
 <li>À chaque niveau, chaque nombre est placé une fois : au plus <strong>n comparaisons par niveau</strong>.</li>
@@ -1521,6 +1526,10 @@
 </tbody>
 </table>
 <p>Quand la liste est deux fois plus longue, il y a <strong>un peu plus de 2 fois plus</strong> de comparaisons : on parle alors de <strong>complexité O(n log n)</strong>, le travail grandit comme n (les nombres placés à chaque niveau) multiplié par log n (le nombre de niveaux). C'est beaucoup moins que le × 4 du tri par sélection.</p>
+<div class="admonition note">
+<p class="admonition-title">Une version simplifiée</p>
+<p>La version présentée ici, qui part des listes d'un seul nombre et remonte, est une version simplifiée du tri par fusion. La version habituelle part de la liste entière : elle la coupe en deux moitiés, puis chaque moitié en deux, et ainsi de suite, avant de fusionner en remontant. Les deux versions ont le <strong>même nombre de niveaux</strong> et la <strong>même complexité</strong>, O(n log n). La version habituelle demande parfois un peu moins de comparaisons, car ses moitiés sont toujours équilibrées.</p>
+</div>
 <p>Comparaison des deux tris :</p>
 <table>
 <thead>
