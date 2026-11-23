@@ -1,0 +1,2893 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://crs-info.github.io/pub/m2/algo-recommandation/qui-choisit-notions/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../../algo-chercher-trier-complexite/chercher-et-trier/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Qui choisit ce que vous voyez ? Les notions - Informatique, 2e année du collège</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hanken+Grotesk:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Hanken Grotesk";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/lavande.907d69ed.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#qui-choisit-ce-que-vous-voyez-les-notions" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Informatique, 2e année du collège" class="md-header__button md-logo" aria-label="Informatique, 2e année du collège" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Informatique, 2e année du collège
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Qui choisit ce que vous voyez ? Les notions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Thème sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Thème sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Thème clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Thème clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Informatique, 2e année du collège" class="md-nav__button md-logo" aria-label="Informatique, 2e année du collège" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Informatique, 2e année du collège
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithmique et programmation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algorithmique et programmation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qui choisit ce que vous voyez ?
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Qui choisit ce que vous voyez ?
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qui choisit ce que vous voyez ? Les notions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qui choisit ce que vous voyez ? Les notions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-le-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction : le problème
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-les-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Les données
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Les données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#donnee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Donnée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pertinence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pertinence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representer-une-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Représenter une information
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-organiser-les-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Organiser les données
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Organiser les données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cle-et-valeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clé et valeur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-fiche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La fiche
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-tableau-de-fiches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le tableau de fiches
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-decider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Décider
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Décider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regle-critere-et-priorite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Règle, critère et priorité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regle-precise-regle-ambigue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Règle précise, règle ambiguë
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La condition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lordre-des-questions-compte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'ordre des questions compte
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-repeter-et-filtrer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Répéter et filtrer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Répéter et filtrer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parcourir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parcourir
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtrer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-classer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Classer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Classer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classement-et-filtre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classement et filtre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le score
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poids-penalite-bonus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Poids, pénalité, bonus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memes-donnees-autre-classement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mêmes données, autre classement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-egalites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les égalités
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vers-la-suite-comment-classer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vers la suite : comment classer ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-personnaliser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Personnaliser
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Personnaliser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-meme-fil-pour-tout-le-monde" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le même fil pour tout le monde ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-profil-un-tableau-de-poids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le profil : un tableau de poids
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relier-un-post-au-profil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relier un post au profil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laffinite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'affinité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#un-score-en-trois-parties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un score en trois parties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deux-personnes-deux-fils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deux personnes, deux fils
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pourquoi-multiplier-et-garder-des-nombres-positifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pourquoi multiplier, et garder des nombres positifs ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-apprendre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Apprendre
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Apprendre">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-profil-declare-et-le-profil-appris" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le profil déclaré et le profil appris
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#une-premiere-idee-ajouter-un-peu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Une première idée : ajouter un peu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#une-meilleure-idee-se-rapprocher-dune-cible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Une meilleure idée : se rapprocher d'une cible
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-vitesse-dapprentissage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La vitesse d'apprentissage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#une-vitesse-pour-chaque-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Une vitesse pour chaque action
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#un-exemple-sur-trois-tours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un exemple sur trois tours
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-lalgorithme-est-il-neutre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. L'algorithme est-il neutre ?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. L&#39;algorithme est-il neutre ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#une-boucle-de-retroaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Une boucle de rétroaction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#une-bulle-qui-se-referme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Une bulle qui se referme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-riches-deviennent-plus-riches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les riches deviennent plus riches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-bulle-de-filtre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La bulle de filtre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discussion-quelle-intention-derriere-lalgorithme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discussion : quelle intention derrière l'algorithme ?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Discussion : quelle intention derrière l&#39;algorithme ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#une-intention-et-ses-consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Une intention, et ses conséquences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-ne-mesure-pas-les-gouts-on-les-suppose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        On ne mesure pas les goûts, on les suppose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dautres-objectifs-dautres-regles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D'autres objectifs, d'autres règles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dans-les-vrais-reseaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dans les vrais réseaux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dans les vrais réseaux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beaucoup-plus-dindicateurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beaucoup plus d'indicateurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leconomie-de-lattention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'économie de l'attention
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#des-bulles-tres-differentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Des bulles très différentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-spirale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La spirale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qui-decide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qui décide ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lexique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lexique
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chercher, trier, complexité
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chercher, trier, complexité
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algo-chercher-trier-complexite/chercher-et-trier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chercher et trier : l'efficacité des algorithmes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="qui-choisit-ce-que-vous-voyez-les-notions">Qui choisit ce que vous voyez ? Les notions<a class="headerlink" href="#qui-choisit-ce-que-vous-voyez-les-notions" title="Permanent link">&para;</a></h1>
+<p>Ce document présente les principales notions vues dans les séances sur l'algorithme de recommandation.</p>
+<hr />
+<h2 id="introduction-le-probleme">Introduction : le problème<a class="headerlink" href="#introduction-le-probleme" title="Permanent link">&para;</a></h2>
+<p>Quand vous ouvrez une application comme Instagram, des milliers de posts pourraient s'afficher. Votre écran n'en montre que quelques-uns. Quelque chose a donc <strong>choisi</strong> lesquels montrer, et dans quel ordre.</p>
+<p>Une machine n'a pas de goûts. Elle ne sait pas ce qui est « intéressant ». Pour choisir, il lui faut :</p>
+<ol>
+<li>des <strong>données</strong> sur les posts et sur vous ;</li>
+<li>une façon d'<strong>organiser</strong> ces données ;</li>
+<li>des <strong>règles</strong> pour décider ;</li>
+<li>un moyen d'appliquer ces règles à <strong>tous</strong> les posts ;</li>
+<li>un moyen de <strong>classer</strong> les posts, du premier au dernier ;</li>
+<li>une façon de décrire <strong>vos goûts</strong>, pour que le fil soit le vôtre ;</li>
+<li>un moyen d'<strong>apprendre</strong> ces goûts à partir de ce que vous faites.</li>
+</ol>
+<p>Chaque partie de ce document correspond à l'une de ces étapes. La partie 8 regarde ce qui se passe quand tout cela tourne en boucle.</p>
+<hr />
+<h2 id="1-les-donnees">1. Les données<a class="headerlink" href="#1-les-donnees" title="Permanent link">&para;</a></h2>
+<h3 id="donnee">Donnée<a class="headerlink" href="#donnee" title="Permanent link">&para;</a></h3>
+<p>Une <strong>donnée</strong> est une information qu'une application peut connaître à propos de quelqu'un ou de quelque chose : un âge, un lieu, une heure de connexion, un like…</p>
+<p>Une application ne devine rien. Tout ce qu'elle sait vient de données qu'elle a collectées :</p>
+<ul>
+<li><strong>directement</strong> : ce que vous lui donnez vous-même (votre âge, vos likes, vos abonnements) ;</li>
+<li><strong>indirectement</strong> : ce qu'elle observe pendant que vous l'utilisez (l'heure à laquelle vous vous connectez, le temps passé devant un post).</li>
+</ul>
+<h3 id="pertinence">Pertinence<a class="headerlink" href="#pertinence" title="Permanent link">&para;</a></h3>
+<p>Une donnée est <strong>pertinente</strong> si elle est utile <strong>pour un problème donné</strong>. Une donnée n'est jamais utile « dans l'absolu » : tout dépend de ce qu'on cherche à faire.</p>
+<p>Pour le problème « choisir le prochain post à afficher », on peut ranger les données en trois catégories :</p>
+<table>
+<thead>
+<tr>
+<th>Catégorie</th>
+<th>Définition</th>
+<th>Exemples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Indispensable</strong></td>
+<td>La donnée doit toujours être là. Sans elle, le problème ne peut pas être résolu.</td>
+<td>le contenu du post (sans lui, il n'y a rien à afficher), l'identifiant du post</td>
+</tr>
+<tr>
+<td><strong>Utile selon les règles</strong></td>
+<td>La donnée ne sert que si une règle l'utilise.</td>
+<td>le nombre de likes, l'ancienneté, l'auteur, le sujet</td>
+</tr>
+<tr>
+<td><strong>Inutile</strong></td>
+<td>Aucune règle raisonnable ne l'utilise.</td>
+<td>la police de caractères de la légende, la résolution d'écran de l'auteur</td>
+</tr>
+</tbody>
+</table>
+<p>Une même donnée peut changer de catégorie si le problème change :</p>
+<ul>
+<li>pour afficher les posts du plus récent au plus ancien, l'ancienneté devient <strong>indispensable</strong> ;</li>
+<li>pour afficher les posts au hasard, cette même ancienneté devient <strong>inutile</strong>.</li>
+</ul>
+<h3 id="representer-une-information">Représenter une information<a class="headerlink" href="#representer-une-information" title="Permanent link">&para;</a></h3>
+<p>Une même information peut être écrite de plusieurs façons. Le moment où un post a été publié peut s'écrire :</p>
+<ul>
+<li>comme une <strong>date</strong> : « 3 septembre 2026 ». C'est un texte ;</li>
+<li>comme une <strong>ancienneté</strong> : 48. C'est un nombre.</li>
+</ul>
+<p>La forme choisie décide de ce qu'on peut faire avec la donnée. Avec une date écrite en texte, on ne peut pas faire de calcul. Même la comparer est délicat : une machine compare un texte caractère par caractère. Pour elle, « 12 septembre » vient avant « 3 août », parce que « 1 » vient avant « 3 ». Avec une ancienneté, on peut calculer : par exemple, enlever des points à un post parce qu'il est vieux (voir la partie 5).</p>
+<p>L'ancienneté se calcule toujours à partir de la date et de l'heure du post, et de l'heure actuelle.</p>
+<p>Un nombre seul ne suffit pas : 48 quoi ? Heures, jours, minutes ? Il faut toujours connaître l'<strong>unité</strong>. Dans ce document, l'ancienneté est donnée <strong>en heures</strong>.</p>
+<div class="admonition question">
+<p class="admonition-title">Exercice 1</p>
+<p>On veut afficher les posts <strong>du plus récent au plus ancien</strong>. Rangez chaque donnée dans une des trois catégories (indispensable, utile selon les règles, inutile) :</p>
+<p>le contenu du post, l'ancienneté, le nombre de likes, la police de caractères, l'identifiant du post, le sujet.</p>
+<p>Puis refaites l'exercice pour la règle « les posts <strong>les plus likés</strong> d'abord ». Quelles données ont changé de catégorie ?</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">À retenir</p>
+<ul>
+<li>Une donnée est une information collectée, directement ou indirectement.</li>
+<li>Une donnée est pertinente par rapport à un problème : indispensable, utile selon les règles, ou inutile.</li>
+<li>La forme d'une donnée (texte ou nombre) décide de ce qu'on peut faire avec. Un nombre a toujours une unité.</li>
+</ul>
+</div>
+<hr />
+<h2 id="2-organiser-les-donnees">2. Organiser les données<a class="headerlink" href="#2-organiser-les-donnees" title="Permanent link">&para;</a></h2>
+<h3 id="cle-et-valeur">Clé et valeur<a class="headerlink" href="#cle-et-valeur" title="Permanent link">&para;</a></h3>
+<p>Le nombre <code>42</code>, tout seul, ne veut rien dire. C'est peut-être un nombre de likes, un âge, une note.</p>
+<p>Si on lui donne un nom, il prend un sens : « likes : 42 ». Le nombre n'a pas changé, mais on sait maintenant ce qu'il représente.</p>
+<ul>
+<li>La <strong>clé</strong> est le nom de l'information (« likes »).</li>
+<li>La <strong>valeur</strong> est l'information elle-même (42).</li>
+</ul>
+<p>Le nom porte le sens, la valeur porte la donnée.</p>
+<h3 id="la-fiche">La fiche<a class="headerlink" href="#la-fiche" title="Permanent link">&para;</a></h3>
+<p>Un post n'est pas une seule information, mais plusieurs : un auteur, un type, un nombre de likes… Une <strong>fiche</strong> regroupe toutes les paires clé-valeur qui décrivent <strong>une même chose</strong>.</p>
+<p>Voici la fiche d'un post :</p>
+<table>
+<thead>
+<tr>
+<th>Clé</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auteur</td>
+<td>Karim</td>
+</tr>
+<tr>
+<td>type</td>
+<td>vidéo</td>
+</tr>
+<tr>
+<td>likes</td>
+<td>45</td>
+</tr>
+<tr>
+<td>commentaires</td>
+<td>20</td>
+</tr>
+<tr>
+<td>ancienneté (h)</td>
+<td>10</td>
+</tr>
+<tr>
+<td>sujet</td>
+<td>sport</td>
+</tr>
+</tbody>
+</table>
+<p>Sans la fiche, ces valeurs seraient éparpillées. On ne saurait plus qu'elles appartiennent au même post.</p>
+<h3 id="le-tableau-de-fiches">Le tableau de fiches<a class="headerlink" href="#le-tableau-de-fiches" title="Permanent link">&para;</a></h3>
+<p>Pour traiter beaucoup de posts, on range leurs fiches dans un <strong>tableau</strong> : les fiches sont placées les unes après les autres, dans un ordre précis. Chaque fiche a une position, son <strong>indice</strong>. <strong>Le premier indice est 0.</strong></p>
+<p>Toutes les fiches ont les mêmes clés. On peut donc les présenter sous forme de tableau : <strong>une ligne par fiche, une colonne par clé</strong>.</p>
+<p>Voici le tableau de posts utilisé dans la suite de ce document :</p>
+<table>
+<thead>
+<tr>
+<th>Indice</th>
+<th>auteur</th>
+<th>type</th>
+<th>likes</th>
+<th>commentaires</th>
+<th>ancienneté (h)</th>
+<th>sujet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Léa</td>
+<td>photo</td>
+<td>120</td>
+<td>8</td>
+<td>48</td>
+<td>voyage</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Karim</td>
+<td>vidéo</td>
+<td>45</td>
+<td>20</td>
+<td>10</td>
+<td>sport</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Marie</td>
+<td>photo</td>
+<td>300</td>
+<td>5</td>
+<td>96</td>
+<td>cuisine</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Julie</td>
+<td>vidéo</td>
+<td>89</td>
+<td>34</td>
+<td>18</td>
+<td>musique</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Inès</td>
+<td>vidéo</td>
+<td>500</td>
+<td>60</td>
+<td>120</td>
+<td>musique</td>
+</tr>
+</tbody>
+</table>
+<p>Ce tableau contient 5 fiches. Leurs indices vont de 0 à 4.</p>
+<p>Dans le notebook, le tableau de posts est plus long : il contient 10 posts. Les 5 posts ci-dessus en font partie, mais pas aux mêmes indices.</p>
+<div class="admonition question">
+<p class="admonition-title">Exercice 2</p>
+<p>En utilisant le tableau de posts :</p>
+<ol>
+<li>Quel est l'auteur du post d'indice 2 ?</li>
+<li>Quel est l'indice du post qui a le plus de commentaires ?</li>
+<li>Quel est l'indice du post le plus récent ?</li>
+<li>On ajoute un sixième post à la fin du tableau. Quel est son indice ?</li>
+</ol>
+</div>
+<div class="admonition important">
+<p class="admonition-title">À retenir</p>
+<ul>
+<li>Une clé donne un nom à une valeur. Le nom porte le sens, la valeur porte la donnée.</li>
+<li>Une fiche regroupe les paires clé-valeur qui décrivent une même chose.</li>
+<li>Un tableau range plusieurs fiches dans un ordre. Chaque fiche a un indice, qui commence à 0.</li>
+</ul>
+</div>
+<hr />
+<h2 id="3-decider">3. Décider<a class="headerlink" href="#3-decider" title="Permanent link">&para;</a></h2>
+<h3 id="regle-critere-et-priorite">Règle, critère et priorité<a class="headerlink" href="#regle-critere-et-priorite" title="Permanent link">&para;</a></h3>
+<p>Une <strong>règle</strong> dit comment choisir les posts. Par exemple : « afficher d'abord les posts de moins de 24 heures ».</p>
+<p>Un <strong>critère</strong> est ce qu'on regarde pour décider : le nombre de likes, l'ancienneté, le sujet… Un critère s'appuie toujours sur une donnée déjà disponible. On ne peut pas décider à partir d'une information qu'on n'a pas.</p>
+<p>La <strong>priorité</strong> est l'ordre dans lequel on applique les critères, quand une règle en utilise plusieurs.</p>
+<h3 id="regle-precise-regle-ambigue">Règle précise, règle ambiguë<a class="headerlink" href="#regle-precise-regle-ambigue" title="Permanent link">&para;</a></h3>
+<p>Une machine ne peut suivre une règle que si elle est <strong>applicable sans interprétation</strong> : deux personnes qui l'appliquent obtiennent exactement le même résultat.</p>
+<table>
+<thead>
+<tr>
+<th>Règle ambiguë</th>
+<th>Pourquoi ?</th>
+<th>Règle précise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>« Les posts intéressants d'abord »</td>
+<td>Intéressant selon quoi ?</td>
+<td>« Les posts avec plus de 100 likes d'abord »</td>
+</tr>
+<tr>
+<td>« Les posts récents d'abord »</td>
+<td>Récent, c'est combien ?</td>
+<td>« Les posts de moins de 24 heures d'abord »</td>
+</tr>
+</tbody>
+</table>
+<h3 id="la-condition">La condition<a class="headerlink" href="#la-condition" title="Permanent link">&para;</a></h3>
+<p>Une <strong>condition</strong> pose une question sur un post. La réponse est <strong>oui ou non</strong> (vrai ou faux). Selon la réponse, on fait une chose ou une autre.</p>
+<blockquote>
+<p>Si le post a plus de 100 likes, alors il est « populaire ». Sinon, il est « peu populaire ».</p>
+</blockquote>
+<p>On peut <strong>combiner</strong> deux questions :</p>
+<table>
+<thead>
+<tr>
+<th>Mot</th>
+<th>La réponse est oui quand…</th>
+<th>Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ET</td>
+<td>les deux questions ont la réponse oui</td>
+<td>« vidéo ET moins de 24 h » : seuls Karim et Julie</td>
+</tr>
+<tr>
+<td>OU</td>
+<td>au moins une des deux questions a la réponse oui</td>
+<td>« vidéo OU plus de 200 likes » : Karim, Marie, Julie, Inès</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lordre-des-questions-compte">L'ordre des questions compte<a class="headerlink" href="#lordre-des-questions-compte" title="Permanent link">&para;</a></h3>
+<p>Quand une règle pose plusieurs questions, on les pose <strong>dans l'ordre</strong>, et on s'arrête à la première réponse oui. Cet ordre, c'est la priorité.</p>
+<p>Règle A :</p>
+<blockquote>
+<p>Si le post est une vidéo, il va <strong>en haut</strong>. Sinon, s'il a plus de 100 likes, il va <strong>au milieu</strong>. Sinon, il va <strong>en bas</strong>.</p>
+</blockquote>
+<p>Règle B, avec les mêmes questions dans l'autre ordre :</p>
+<blockquote>
+<p>Si le post a plus de 100 likes, il va <strong>au milieu</strong>. Sinon, si c'est une vidéo, il va <strong>en haut</strong>. Sinon, il va <strong>en bas</strong>.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Post</th>
+<th>Règle A</th>
+<th>Règle B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Léa (photo, 120 likes)</td>
+<td>au milieu</td>
+<td>au milieu</td>
+</tr>
+<tr>
+<td>Karim (vidéo, 45 likes)</td>
+<td>en haut</td>
+<td>en haut</td>
+</tr>
+<tr>
+<td>Marie (photo, 300 likes)</td>
+<td>au milieu</td>
+<td>au milieu</td>
+</tr>
+<tr>
+<td>Julie (vidéo, 89 likes)</td>
+<td>en haut</td>
+<td>en haut</td>
+</tr>
+<tr>
+<td>Inès (vidéo, 500 likes)</td>
+<td><strong>en haut</strong></td>
+<td><strong>au milieu</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Les questions sont les mêmes, mais Inès n'arrive pas au même endroit. Dans le chapitre « Chercher et trier », ces questions s'écrivent avec les tournures « Si…, alors… » et « Sinon, … » (<a href="../../algo-chercher-trier-complexite/chercher-et-trier/#2-decrire-un-algorithme-en-francais">section 2</a>).</p>
+<div class="admonition question">
+<p class="admonition-title">Exercice 3</p>
+<ol>
+<li>Appliquez la règle « photo OU moins de 20 heures » aux 5 posts du tableau. Quels posts répondent oui ?</li>
+<li>Appliquez la règle « musique ET plus de 50 commentaires ». Quels posts répondent oui ?</li>
+<li>La règle « les posts des auteurs que j'aime d'abord » est ambiguë. Expliquez pourquoi, puis réécrivez-la de façon précise.</li>
+</ol>
+</div>
+<div class="admonition important">
+<p class="admonition-title">À retenir</p>
+<ul>
+<li>Une règle s'appuie sur des critères, et chaque critère sur une donnée disponible.</li>
+<li>Une règle est utilisable par une machine si elle s'applique sans interprétation.</li>
+<li>Une condition pose une question à laquelle on répond oui ou non. ET et OU combinent deux questions.</li>
+<li>Quand on pose plusieurs questions, leur ordre est la priorité : il peut changer le résultat.</li>
+</ul>
+</div>
+<hr />
+<h2 id="4-repeter-et-filtrer">4. Répéter et filtrer<a class="headerlink" href="#4-repeter-et-filtrer" title="Permanent link">&para;</a></h2>
+<h3 id="parcourir">Parcourir<a class="headerlink" href="#parcourir" title="Permanent link">&para;</a></h3>
+<p>Une règle s'applique à <strong>un</strong> post. Pour l'appliquer à tous, on <strong>parcourt</strong> le tableau : on prend les fiches une par une, de l'indice 0 jusqu'à la dernière, et on applique la même règle à chacune.</p>
+<p>On écrit la règle une seule fois. Elle s'applique ensuite à 5 posts, à 1000, ou à des millions : la machine ne se fatigue pas. C'est ce qui rend possible un fil comme celui d'Instagram.</p>
+<p>Dans le chapitre « Chercher et trier », parcourir un tableau s'écrit avec la tournure « Pour chaque… » (<a href="../../algo-chercher-trier-complexite/chercher-et-trier/#2-decrire-un-algorithme-en-francais">section 2</a>).</p>
+<h3 id="filtrer">Filtrer<a class="headerlink" href="#filtrer" title="Permanent link">&para;</a></h3>
+<p><strong>Filtrer</strong>, c'est garder seulement les fiches qui répondent oui à une règle. Le résultat est un <strong>nouveau tableau</strong>, plus petit. Il peut même être vide si aucune fiche ne répond oui.</p>
+<p>Exemple : filtrer les posts de <strong>moins de 24 heures</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Indice</th>
+<th>Post</th>
+<th>Ancienneté (h)</th>
+<th>Moins de 24 h ?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Léa</td>
+<td>48</td>
+<td>non</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Karim</td>
+<td>10</td>
+<td><strong>oui</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Marie</td>
+<td>96</td>
+<td>non</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Julie</td>
+<td>18</td>
+<td><strong>oui</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Inès</td>
+<td>120</td>
+<td>non</td>
+</tr>
+</tbody>
+</table>
+<p>Résultat : un nouveau tableau qui contient Karim, puis Julie. On peut aussi <strong>compter</strong> les fiches gardées : il y en a 2.</p>
+<div class="admonition warning">
+<p class="admonition-title">Filtrer ne classe pas</p>
+<p>Le filtre garde Karim et Julie, dans l'ordre où ils étaient dans le tableau de départ. Il ne dit pas lequel des deux montrer en premier. Pour cela, il faut <strong>classer</strong> (partie 5).</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exercice 4</p>
+<ol>
+<li>Filtrez le tableau avec la règle « vidéo ET plus de 30 commentaires ». Écrivez le nouveau tableau et comptez ses fiches.</li>
+<li>Inventez une règle dont le résultat est un tableau vide.</li>
+<li>On filtre un tableau de 1000 posts. Combien de fois la règle est-elle appliquée ?</li>
+</ol>
+</div>
+<div class="admonition important">
+<p class="admonition-title">À retenir</p>
+<ul>
+<li>Parcourir, c'est appliquer la même règle à chaque fiche du tableau, une par une.</li>
+<li>Filtrer, c'est garder les fiches qui répondent oui. Le résultat est un nouveau tableau, parfois vide.</li>
+<li>Filtrer ne classe pas : le résultat garde l'ordre de départ.</li>
+</ul>
+</div>
+<hr />
+<h2 id="5-classer">5. Classer<a class="headerlink" href="#5-classer" title="Permanent link">&para;</a></h2>
+<h3 id="classement-et-filtre">Classement et filtre<a class="headerlink" href="#classement-et-filtre" title="Permanent link">&para;</a></h3>
+<p>Un filtre pose une question <strong>à chaque post, séparément</strong> : oui ou non.</p>
+<p>Un <strong>classement</strong> compare les posts <strong>entre eux</strong> pour les mettre dans un ordre : « les posts avec <strong>le plus</strong> de likes d'abord ». On ne peut pas savoir si un post est « le plus liké » en le regardant seul : il faut le comparer à tous les autres.</p>
+<h3 id="le-score">Le score<a class="headerlink" href="#le-score" title="Permanent link">&para;</a></h3>
+<p>Pour classer selon plusieurs critères à la fois, on donne une note à chaque post : son <strong>score</strong>. Le score est un nombre calculé pour chaque post. Plus il est grand, plus le post est placé haut dans le fil.</p>
+<p>Le score est calculé avec une <strong>formule</strong>. Exemple :</p>
+<blockquote>
+<p>score = likes + commentaires × 2</p>
+</blockquote>
+<p>Pour le post de Karim : 45 + 20 × 2 = 45 + 40 = <strong>85</strong>.</p>
+<p>Attention : la multiplication se fait <strong>avant</strong> l'addition. (45 + 20) × 2 = 130 est faux.</p>
+<h3 id="poids-penalite-bonus">Poids, pénalité, bonus<a class="headerlink" href="#poids-penalite-bonus" title="Permanent link">&para;</a></h3>
+<p>Une formule peut être réglée de trois façons.</p>
+<p><strong>Le poids</strong> dit combien un critère compte. Dans la formule ci-dessus, le poids des commentaires est 2 : un commentaire compte comme deux likes. Un poids de 10 rendrait les commentaires beaucoup plus importants.</p>
+<p><strong>La pénalité</strong> enlève des points. Par exemple, pour faire descendre les vieux posts :</p>
+<blockquote>
+<p>score = likes + commentaires × 2 − ancienneté × 5</p>
+</blockquote>
+<p><strong>Le bonus</strong> ajoute des points, mais seulement si une condition est vraie. Par exemple :</p>
+<blockquote>
+<p>Si le post a moins de 24 heures, il reçoit 150 points en plus.</p>
+</blockquote>
+<h3 id="memes-donnees-autre-classement">Mêmes données, autre classement<a class="headerlink" href="#memes-donnees-autre-classement" title="Permanent link">&para;</a></h3>
+<p>Voici les 5 posts classés avec deux formules différentes.</p>
+<table>
+<thead>
+<tr>
+<th>Post</th>
+<th>Formule 1 : likes + commentaires × 2</th>
+<th>Formule 2 : formule 1 − ancienneté × 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Léa</td>
+<td>136</td>
+<td>136 − 240 = −104</td>
+</tr>
+<tr>
+<td>Karim</td>
+<td>85</td>
+<td>85 − 50 = 35</td>
+</tr>
+<tr>
+<td>Marie</td>
+<td>310</td>
+<td>310 − 480 = −170</td>
+</tr>
+<tr>
+<td>Julie</td>
+<td>157</td>
+<td>157 − 90 = 67</td>
+</tr>
+<tr>
+<td>Inès</td>
+<td>620</td>
+<td>620 − 600 = 20</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Rang</th>
+<th>Formule 1</th>
+<th>Formule 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Inès</td>
+<td>Julie</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Marie</td>
+<td>Karim</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Julie</td>
+<td>Inès</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Léa</td>
+<td>Léa</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Karim</td>
+<td>Marie</td>
+</tr>
+</tbody>
+</table>
+<p>Les données sont les mêmes, mais les deux fils ne se ressemblent pas. Avec la formule 1, les posts populaires mais anciens dominent. Avec la formule 2, les posts récents remontent.</p>
+<p>Certains scores sont négatifs. Ce n'est pas un problème : pour classer, seul l'ordre compte, et −104 est plus grand que −170.</p>
+<h3 id="les-egalites">Les égalités<a class="headerlink" href="#les-egalites" title="Permanent link">&para;</a></h3>
+<p>Deux posts peuvent avoir exactement le même score. Il faut alors une règle de plus pour les départager, par exemple : « en cas d'égalité, le plus récent d'abord ».</p>
+<p>Sans cette règle, la machine décide quand même, souvent selon l'ordre du tableau de départ. C'est un choix que personne n'a fait consciemment.</p>
+<div class="admonition important">
+<p class="admonition-title">Le score est un choix</p>
+<p>Le score n'est pas une vérité. Les poids, les pénalités et les bonus sont choisis par des personnes. En choisissant une formule, elles décident de ce que vous verrez en premier.</p>
+</div>
+<h3 id="vers-la-suite-comment-classer">Vers la suite : comment classer ?<a class="headerlink" href="#vers-la-suite-comment-classer" title="Permanent link">&para;</a></h3>
+<p>Pour classer, il faut d'abord trouver le post qui a le <strong>meilleur score</strong>. C'est exactement le problème de la recherche du maximum, appliqué aux scores (chapitre « Chercher et trier », <a href="../../algo-chercher-trier-complexite/chercher-et-trier/#4-recherche-du-minimum">section 4</a>).</p>
+<p>Ensuite ? Une fois le meilleur trouvé, que faire des autres ? C'est la question de la prochaine séance.</p>
+<div class="admonition question">
+<p class="admonition-title">Exercice 5</p>
+<p>On utilise la formule : score = likes + commentaires × 3 − ancienneté × 2.</p>
+<ol>
+<li>Calculez le score des 5 posts du tableau.</li>
+<li>Classez-les du plus grand score au plus petit.</li>
+<li>Changez <strong>un seul</strong> nombre de la formule pour que Julie arrive en première position. Vérifiez par le calcul.</li>
+</ol>
+</div>
+<div class="admonition important">
+<p class="admonition-title">À retenir</p>
+<ul>
+<li>Un filtre répond oui ou non pour chaque post. Un classement compare les posts entre eux.</li>
+<li>Le score est un nombre calculé avec une formule. On classe les posts du plus grand score au plus petit.</li>
+<li>Le poids dit combien un critère compte. La pénalité enlève des points. Le bonus en ajoute si une condition est vraie.</li>
+<li>Mêmes données, autre formule : autre classement.</li>
+<li>Les égalités demandent une règle de plus.</li>
+</ul>
+</div>
+<hr />
+<h2 id="6-personnaliser">6. Personnaliser<a class="headerlink" href="#6-personnaliser" title="Permanent link">&para;</a></h2>
+<h3 id="le-meme-fil-pour-tout-le-monde">Le même fil pour tout le monde ?<a class="headerlink" href="#le-meme-fil-pour-tout-le-monde" title="Permanent link">&para;</a></h3>
+<p>Avec les formules de la partie 5, tout le monde reçoit le même classement. Pourtant, Zoé adore le sport et les vidéos. Tom préfère les photos de cuisine et de voyage. Un bon fil doit dépendre de <strong>qui regarde</strong>.</p>
+<p>Il faut donc des données sur la personne : son <strong>profil</strong>.</p>
+<h3 id="le-profil-un-tableau-de-poids">Le profil : un tableau de poids<a class="headerlink" href="#le-profil-un-tableau-de-poids" title="Permanent link">&para;</a></h3>
+<p>Un <strong>profil</strong> décrit les goûts d'une personne avec des nombres. C'est un <strong>tableau de fiches</strong>, comme le tableau de posts de la partie 2. Chaque fiche a trois clés :</p>
+<ul>
+<li><strong>caractéristique</strong> : ce qu'on regarde dans un post (type, sujet ou auteur) ;</li>
+<li><strong>valeur</strong> : une valeur possible de cette caractéristique (vidéo, sport, Karim…) ;</li>
+<li><strong>poids</strong> : ce que cette valeur compte pour la personne.</li>
+</ul>
+<p>Voici le profil de Zoé :</p>
+<table>
+<thead>
+<tr>
+<th>Indice</th>
+<th>caractéristique</th>
+<th>valeur</th>
+<th>poids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>type</td>
+<td>photo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>type</td>
+<td>vidéo</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>sujet</td>
+<td>sport</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>sujet</td>
+<td>musique</td>
+<td>0,5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>sujet</td>
+<td>cuisine</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>auteur</td>
+<td>Karim</td>
+<td>1,5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>auteur</td>
+<td>Léa</td>
+<td>1,5</td>
+</tr>
+</tbody>
+</table>
+<p>Un poids se lit toujours de la même façon :</p>
+<ul>
+<li><strong>1</strong> : neutre, la préférence ne change rien ;</li>
+<li><strong>plus de 1</strong> : le post est favorisé ;</li>
+<li><strong>moins de 1</strong> : le post est défavorisé.</li>
+</ul>
+<p>Une valeur qui n'est <strong>pas</strong> dans le profil a le poids <strong>1</strong>. Le sujet voyage et l'autrice Julie n'apparaissent pas dans le profil de Zoé : leur poids vaut donc 1.</p>
+<h3 id="relier-un-post-au-profil">Relier un post au profil<a class="headerlink" href="#relier-un-post-au-profil" title="Permanent link">&para;</a></h3>
+<p>Le post et le profil parlent des mêmes caractéristiques : type, sujet, auteur. Pour trouver le poids d'un post pour une caractéristique, on fait deux choses :</p>
+<ol>
+<li>dans la fiche du post, on lit la <strong>valeur</strong> de cette caractéristique ;</li>
+<li>dans le profil, on <strong>cherche</strong> la ligne qui a <strong>cette caractéristique et cette valeur</strong>.</li>
+</ol>
+<p>C'est une recherche dans un tableau non trié, comme dans le chapitre « Chercher et trier » (<a href="../../algo-chercher-trier-complexite/chercher-et-trier/#5-recherche-dans-une-liste-non-triee">section 5</a>). Ici, une ligne correspond seulement si <strong>deux</strong> conditions sont vraies.</p>
+<p>Exemple avec le post de Karim et le profil de Zoé :</p>
+<table>
+<thead>
+<tr>
+<th>Caractéristique</th>
+<th>Valeur dans le post</th>
+<th>Ligne trouvée dans le profil</th>
+<th>Poids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>vidéo</td>
+<td>indice 1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>sujet</td>
+<td>sport</td>
+<td>indice 2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>auteur</td>
+<td>Karim</td>
+<td>indice 5</td>
+<td>1,5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="laffinite">L'affinité<a class="headerlink" href="#laffinite" title="Permanent link">&para;</a></h3>
+<p>L'<strong>affinité</strong> dit à quel point un post correspond au profil. C'est le <strong>produit</strong> des poids trouvés pour chaque caractéristique :</p>
+<blockquote>
+<p>affinite = poids_type × poids_sujet × poids_auteur</p>
+</blockquote>
+<ul>
+<li><strong>poids_type</strong> : le poids, dans le profil, du type du post ;</li>
+<li><strong>poids_sujet</strong> : le poids, dans le profil, du sujet du post ;</li>
+<li><strong>poids_auteur</strong> : le poids, dans le profil, de l'auteur du post.</li>
+</ul>
+<p>Si une valeur n'est pas dans le profil, son poids vaut 1.</p>
+<div class="admonition algorithme">
+<p class="admonition-title">Calculer l'affinité</p>
+<dl>
+<dt>PROBLÈME</dt>
+<dd>Nous disposons du profil d'une personne et d'un post. Nous recherchons l'affinité de cette personne pour ce post. Si une valeur du post n'est pas dans le profil, son poids vaut 1.</dd>
+<dt>ENTRÉES</dt>
+<dd>
+<ul>
+<li>profil : un tableau de fiches, avec les clés caractéristique, valeur et poids. Ex. le profil de Zoé ci-dessus</li>
+<li>post : la fiche du post. Ex. <code>type = vidéo</code>, <code>sujet = musique</code>, <code>auteur = Julie</code></li>
+</ul>
+</dd>
+<dt>SORTIE</dt>
+<dd>
+<ul>
+<li>affinite : le produit des trois poids du post. Ex. <code>affinite = 1</code></li>
+</ul>
+</dd>
+<dt>PRINCIPE</dt>
+<dd>On cherche dans le profil le poids du type du post, puis celui de son sujet, puis celui de son auteur. Si une valeur n'est pas dans le profil, son poids vaut 1. L'affinité est le produit de ces trois poids.</dd>
+<dt>ÉTAPES</dt>
+<dd>
+<ol>
+<li>Chercher, dans profil, la ligne qui a la caractéristique type et la valeur du type du post. Si elle existe, retenir poids_type = son poids. Sinon, retenir poids_type = 1.</li>
+<li>Chercher, dans profil, la ligne qui a la caractéristique sujet et la valeur du sujet du post. Si elle existe, retenir poids_sujet = son poids. Sinon, retenir poids_sujet = 1.</li>
+<li>Chercher, dans profil, la ligne qui a la caractéristique auteur et la valeur de l'auteur du post. Si elle existe, retenir poids_auteur = son poids. Sinon, retenir poids_auteur = 1.</li>
+<li>Retenir affinite = poids_type × poids_sujet × poids_auteur.</li>
+<li>Renvoyer affinite.</li>
+</ol>
+</dd>
+</dl>
+</div>
+<p>Deux exemples avec le profil de Zoé :</p>
+<ul>
+<li>post de Julie (vidéo, musique, Julie) : poids_type = 2, poids_sujet = 0,5, poids_auteur = 1 car Julie n'est pas dans le profil. Donc affinite = 2 × 0,5 × 1 = <strong>1</strong>.</li>
+<li>post de Karim (vidéo, sport, Karim) : poids_type = 2, poids_sujet = 2, poids_auteur = 1,5. Donc affinite = 2 × 2 × 1,5 = <strong>6</strong>.</li>
+</ul>
+<h3 id="un-score-en-trois-parties">Un score en trois parties<a class="headerlink" href="#un-score-en-trois-parties" title="Permanent link">&para;</a></h3>
+<p>Le score personnalisé combine trois parties :</p>
+<blockquote>
+<p>score = popularité × fraîcheur × affinité</p>
+</blockquote>
+<ul>
+<li>La <strong>popularité</strong> vient de la partie 5 : likes + commentaires × 2.</li>
+<li>La <strong>fraîcheur</strong> fait baisser les vieux posts. Elle remplace la pénalité de la partie 5.</li>
+<li>L'<strong>affinité</strong> dépend de la personne qui regarde.</li>
+</ul>
+<p>Dans ce document, la fraîcheur est donnée par ce tableau :</p>
+<table>
+<thead>
+<tr>
+<th>Ancienneté</th>
+<th>Fraîcheur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>moins de 24 h</td>
+<td>1</td>
+</tr>
+<tr>
+<td>de 24 h à 71 h</td>
+<td>0,5</td>
+</tr>
+<tr>
+<td>72 h et plus</td>
+<td>0,2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deux-personnes-deux-fils">Deux personnes, deux fils<a class="headerlink" href="#deux-personnes-deux-fils" title="Permanent link">&para;</a></h3>
+<p><strong>Ce qui est pareil pour tout le monde.</strong> La popularité et la fraîcheur ne dépendent que du post. Leur produit s'appelle le <strong>score de base</strong> :</p>
+<blockquote>
+<p>score de base = popularité × fraîcheur</p>
+<p>score = score de base × affinité</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Post</th>
+<th>Popularité</th>
+<th>Fraîcheur</th>
+<th>Score de base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Léa</td>
+<td>136</td>
+<td>0,5</td>
+<td>68</td>
+</tr>
+<tr>
+<td>Karim</td>
+<td>85</td>
+<td>1</td>
+<td>85</td>
+</tr>
+<tr>
+<td>Marie</td>
+<td>310</td>
+<td>0,2</td>
+<td>62</td>
+</tr>
+<tr>
+<td>Julie</td>
+<td>157</td>
+<td>1</td>
+<td>157</td>
+</tr>
+<tr>
+<td>Inès</td>
+<td>620</td>
+<td>0,2</td>
+<td>124</td>
+</tr>
+</tbody>
+</table>
+<p>Une personne qui a un profil <strong>vide</strong> a une affinité de 1 pour tous les posts. Son score est donc le score de base.</p>
+<p><strong>Ce qui dépend de la personne.</strong> Voici le profil de Tom, à comparer avec celui de Zoé :</p>
+<table>
+<thead>
+<tr>
+<th>Indice</th>
+<th>caractéristique</th>
+<th>valeur</th>
+<th>poids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>type</td>
+<td>photo</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>type</td>
+<td>vidéo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>sujet</td>
+<td>cuisine</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>sujet</td>
+<td>voyage</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>sujet</td>
+<td>sport</td>
+<td>0,5</td>
+</tr>
+<tr>
+<td>5</td>
+<td>sujet</td>
+<td>musique</td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>auteur</td>
+<td>Léa</td>
+<td>1,5</td>
+</tr>
+</tbody>
+</table>
+<p>Le fil de Zoé :</p>
+<table>
+<thead>
+<tr>
+<th>Post</th>
+<th>Affinité : type × sujet × auteur</th>
+<th>Score : score de base × affinité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Léa (photo, voyage, Léa)</td>
+<td>1 × 1 × 1,5 = 1,5</td>
+<td>68 × 1,5 = 102</td>
+</tr>
+<tr>
+<td>Karim (vidéo, sport, Karim)</td>
+<td>2 × 2 × 1,5 = 6</td>
+<td>85 × 6 = 510</td>
+</tr>
+<tr>
+<td>Marie (photo, cuisine, Marie)</td>
+<td>1 × 1 × 1 = 1</td>
+<td>62 × 1 = 62</td>
+</tr>
+<tr>
+<td>Julie (vidéo, musique, Julie)</td>
+<td>2 × 0,5 × 1 = 1</td>
+<td>157 × 1 = 157</td>
+</tr>
+<tr>
+<td>Inès (vidéo, musique, Inès)</td>
+<td>2 × 0,5 × 1 = 1</td>
+<td>124 × 1 = 124</td>
+</tr>
+</tbody>
+</table>
+<p>Le fil de Tom :</p>
+<table>
+<thead>
+<tr>
+<th>Post</th>
+<th>Affinité : type × sujet × auteur</th>
+<th>Score : score de base × affinité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Léa (photo, voyage, Léa)</td>
+<td>2 × 2 × 1,5 = 6</td>
+<td>68 × 6 = 408</td>
+</tr>
+<tr>
+<td>Karim (vidéo, sport, Karim)</td>
+<td>1 × 0,5 × 1 = 0,5</td>
+<td>85 × 0,5 = 42,5</td>
+</tr>
+<tr>
+<td>Marie (photo, cuisine, Marie)</td>
+<td>2 × 2 × 1 = 4</td>
+<td>62 × 4 = 248</td>
+</tr>
+<tr>
+<td>Julie (vidéo, musique, Julie)</td>
+<td>1 × 1 × 1 = 1</td>
+<td>157 × 1 = 157</td>
+</tr>
+<tr>
+<td>Inès (vidéo, musique, Inès)</td>
+<td>1 × 1 × 1 = 1</td>
+<td>124 × 1 = 124</td>
+</tr>
+</tbody>
+</table>
+<p>Les trois classements :</p>
+<p><strong>Profil vide</strong></p>
+<ol>
+<li>Julie (score : 157)</li>
+<li>Inès (score : 124)</li>
+<li>Karim (score : 85)</li>
+<li>Léa (score : 68)</li>
+<li>Marie (score : 62)</li>
+</ol>
+<p><strong>Zoé</strong></p>
+<ol>
+<li>Karim (score : 510)</li>
+<li>Julie (score : 157)</li>
+<li>Inès (score : 124)</li>
+<li>Léa (score : 102)</li>
+<li>Marie (score : 62)</li>
+</ol>
+<p><strong>Tom</strong></p>
+<ol>
+<li>Léa (score : 408)</li>
+<li>Marie (score : 248)</li>
+<li>Julie (score : 157)</li>
+<li>Inès (score : 124)</li>
+<li>Karim (score : 42,5)</li>
+</ol>
+<p><strong>Un post, deux places.</strong> Le post de Karim est premier pour Zoé et dernier pour Tom. Son score de base est le même (85). Seuls les poids changent :</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Zoé</th>
+<th>Tom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>poids_type (vidéo)</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>poids_sujet (sport)</td>
+<td>2</td>
+<td>0,5</td>
+</tr>
+<tr>
+<td>poids_auteur (Karim)</td>
+<td>1,5</td>
+<td>1 (absent)</td>
+</tr>
+<tr>
+<td>affinité</td>
+<td>6</td>
+<td>0,5</td>
+</tr>
+<tr>
+<td>score</td>
+<td>510</td>
+<td>42,5</td>
+</tr>
+</tbody>
+</table>
+<p>Pour Zoé, les trois poids poussent Karim vers le haut. Pour Tom, le sport le tire vers le bas, et rien ne le fait remonter.</p>
+<p>Les posts sont les mêmes. Les formules sont les mêmes. Seul le profil change, et les fils ne se ressemblent plus.</p>
+<h3 id="pourquoi-multiplier-et-garder-des-nombres-positifs">Pourquoi multiplier, et garder des nombres positifs ?<a class="headerlink" href="#pourquoi-multiplier-et-garder-des-nombres-positifs" title="Permanent link">&para;</a></h3>
+<p>Dans la partie 5, la formule 2 donnait un score négatif à Léa : −104. Imaginons que Tom adore les posts de Léa, avec une affinité de 6. Si on multiplie : −104 × 6 = −624. Le post qu'il préfère <strong>descend encore plus bas</strong>. Le bonus est devenu une punition.</p>
+<p>C'est pour cela que les trois parties du score sont toujours <strong>positives</strong>. Avec des nombres positifs, multiplier par plus de 1 fait toujours monter, et multiplier par moins de 1 fait toujours descendre.</p>
+<div class="admonition warning">
+<p class="admonition-title">Jamais de poids égal à 0</p>
+<p>Un poids de 0 donne une affinité de 0, donc un score de 0, quels que soient les likes. Le post disparaît du fil. Un poids peut <strong>réduire</strong> un post, mais ne doit pas l'<strong>effacer</strong>. Dans ce document, les poids restent entre 0,5 et 2.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exercice 6</p>
+<ol>
+<li>Un post vient d'être publié : 0 like et 0 commentaire. Calculez sa popularité, puis son score. Le profil de la personne change-t-il quelque chose ? Pourquoi est-ce un problème ? Comment pourrait-on améliorer la formule ?</li>
+<li>Deux posts sont publiés au même moment. Le post A a 10 000 likes et 0 commentaire. Le post B a 50 likes et 0 commentaire.<ul>
+<li>Calculez la popularité de chaque post.</li>
+<li>L'affinité la plus grande possible vaut 2 × 2 × 2 = 8. Pour une personne qui adore le post B (affinité 8) et qui est neutre pour le post A (affinité 1), lequel arrive en premier ?</li>
+<li>L'affinité a-t-elle encore de l'importance quand un post a énormément de likes ? Comment pourrait-on améliorer la formule ?</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="admonition important">
+<p class="admonition-title">À retenir</p>
+<ul>
+<li>Un profil donne un poids à chaque valeur d'une caractéristique (type, sujet, auteur). 1 est neutre.</li>
+<li>L'affinité est le produit des poids qui correspondent au post.</li>
+<li>score = popularité × fraîcheur × affinité. Les trois parties sont positives.</li>
+<li>Mêmes posts, mêmes formules, autre profil : autre fil.</li>
+</ul>
+</div>
+<hr />
+<h2 id="7-apprendre">7. Apprendre<a class="headerlink" href="#7-apprendre" title="Permanent link">&para;</a></h2>
+<h3 id="le-profil-declare-et-le-profil-appris">Le profil déclaré et le profil appris<a class="headerlink" href="#le-profil-declare-et-le-profil-appris" title="Permanent link">&para;</a></h3>
+<p>Le profil de Zoé, c'est elle qui l'a rempli. C'est un <strong>profil déclaré</strong>, comme les centres d'intérêt qu'on coche à l'inscription.</p>
+<p>Mais une application comme Instagram ne vous demande presque jamais vos goûts. Elle les <strong>déduit</strong> de ce que vous faites : vos commentaires, vos likes, les posts que vous lisez, ceux que vous passez sans vous arrêter. Ce sont des données collectées indirectement (partie 1). Le profil construit ainsi est un <strong>profil appris</strong>.</p>
+<p>Ici, <strong>apprendre</strong> veut simplement dire : <strong>changer les poids du profil après chaque action</strong>.</p>
+<h3 id="une-premiere-idee-ajouter-un-peu">Une première idée : ajouter un peu<a class="headerlink" href="#une-premiere-idee-ajouter-un-peu" title="Permanent link">&para;</a></h3>
+<p>À chaque like, on ajoute 0,1 aux poids qui correspondent au post.</p>
+<p>Après 30 likes de vidéos, le poids « vidéo » vaut 1 + 30 × 0,1 = 4. Après 100 likes, il vaut 11. Le poids grandit <strong>sans limite</strong>. Bientôt, une seule préférence écrase toutes les autres, et le fil ne montre plus qu'une chose.</p>
+<h3 id="une-meilleure-idee-se-rapprocher-dune-cible">Une meilleure idée : se rapprocher d'une cible<a class="headerlink" href="#une-meilleure-idee-se-rapprocher-dune-cible" title="Permanent link">&para;</a></h3>
+<p>Après chaque action, chaque poids qui correspond au post <strong>se rapproche un peu</strong> d'une cible :</p>
+<ul>
+<li><strong>cible = 2</strong> si la personne a liké le post ;</li>
+<li><strong>cible = 0,5</strong> si elle l'a passé sans liker.</li>
+</ul>
+<blockquote>
+<p>nouveau poids = 0,8 × ancien poids + 0,2 × cible</p>
+</blockquote>
+<p>Le nouveau poids garde 80 % de l'ancien et prend 20 % de la cible. Il se trouve donc toujours <strong>entre</strong> l'ancien poids et la cible. Les poids restent ainsi entre 0,5 et 2, même après des milliers d'actions.</p>
+<h3 id="la-vitesse-dapprentissage">La vitesse d'apprentissage<a class="headerlink" href="#la-vitesse-dapprentissage" title="Permanent link">&para;</a></h3>
+<p>Le nombre 0,2 est la <strong>vitesse d'apprentissage</strong>. Il dit à quel point une seule action change le profil. La règle s'écrit, pour n'importe quelle vitesse :</p>
+<blockquote>
+<p>nouveau poids = (1 − vitesse) × ancien poids + vitesse × cible</p>
+</blockquote>
+<p>Avec une vitesse de 0,2, on retrouve la règle précédente : 0,8 × ancien poids + 0,2 × cible.</p>
+<table>
+<thead>
+<tr>
+<th>Vitesse</th>
+<th>Effet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>grande (0,5)</td>
+<td>Le profil change vite. Un seul like par curiosité modifie beaucoup le fil.</td>
+</tr>
+<tr>
+<td>petite (0,05)</td>
+<td>Le profil change lentement. Il faut beaucoup d'actions pour qu'il suive un nouveau goût.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="une-vitesse-pour-chaque-action">Une vitesse pour chaque action<a class="headerlink" href="#une-vitesse-pour-chaque-action" title="Permanent link">&para;</a></h3>
+<p>Toutes les actions ne disent pas la même chose. Écrire un commentaire demande un effort : c'est un signal fort. Rester quelques secondes sur un post sans réagir, c'est peut-être de l'intérêt, peut-être un hasard : c'est un signal faible.</p>
+<p>On donne donc à chaque action sa propre cible et sa propre vitesse :</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Ce que la personne fait</th>
+<th>Ce qu'on suppose</th>
+<th>Cible</th>
+<th>Vitesse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>commenter</strong></td>
+<td>elle écrit un commentaire</td>
+<td>intérêt fort</td>
+<td>2</td>
+<td>0,3</td>
+</tr>
+<tr>
+<td><strong>liker</strong></td>
+<td>elle like le post</td>
+<td>intérêt</td>
+<td>2</td>
+<td>0,2</td>
+</tr>
+<tr>
+<td><strong>lire</strong></td>
+<td>elle reste sur le post, sans liker ni commenter</td>
+<td>intérêt faible</td>
+<td>2</td>
+<td>0,1</td>
+</tr>
+<tr>
+<td><strong>passer</strong></td>
+<td>elle fait défiler sans s'arrêter</td>
+<td>pas d'intérêt</td>
+<td>0,5</td>
+<td>0,2</td>
+</tr>
+</tbody>
+</table>
+<p>Plus une action dit clairement ce que la personne aime, plus la vitesse est grande. Ces nombres ne sont pas « les bons » : c'est encore un choix fait par des personnes.</p>
+<div class="admonition algorithme">
+<p class="admonition-title">Mettre à jour le profil</p>
+<dl>
+<dt>PROBLÈME</dt>
+<dd>Nous disposons du profil d'une personne, d'un post et de l'action qu'elle vient de faire sur ce post. Nous recherchons le profil modifié. Si une valeur du post n'est pas encore dans le profil, nous l'ajoutons avec le poids 1, puis nous la modifions comme les autres.</dd>
+<dt>ENTRÉES</dt>
+<dd>
+<ul>
+<li>profil : un tableau de fiches, avec les clés caractéristique, valeur et poids. Ex. le profil de Sam après le tour 2 (tableau ci-dessous)</li>
+<li>post : la fiche du post. Ex. <code>type = vidéo</code>, <code>sujet = musique</code>, <code>auteur = Julie</code></li>
+<li>action : ce que la personne a fait (commenter, liker, lire ou passer). Ex. <code>action = liker</code></li>
+</ul>
+</dd>
+<dt>SORTIE</dt>
+<dd>
+<ul>
+<li>profil : le profil modifié. Ex. le profil de Sam après le tour 3</li>
+</ul>
+</dd>
+<dt>PRINCIPE</dt>
+<dd>L'action donne une cible et une vitesse, lues dans le tableau des actions. Pour chaque caractéristique, on trouve la ligne du profil qui correspond au post, comme pour l'affinité, et on rapproche son poids de la cible, à cette vitesse. Les autres lignes ne changent pas.</dd>
+<dt>ÉTAPES</dt>
+<dd>
+<ol>
+<li>Chercher action dans le tableau des actions. Retenir cible = sa cible et vitesse = sa vitesse.</li>
+<li>Pour chaque caractéristique parmi type, sujet et auteur :<ul>
+<li>retenir valeur = la valeur de cette caractéristique dans le post ;</li>
+<li>chercher, dans profil, la ligne qui a cette caractéristique et cette valeur ; si elle n'existe pas, ajouter à la fin du profil une ligne avec cette caractéristique, cette valeur et le poids 1 ;</li>
+<li>dans cette ligne, retenir poids = (1 − vitesse) × poids + vitesse × cible.</li>
+</ul>
+</li>
+<li>Renvoyer profil.</li>
+</ol>
+</dd>
+</dl>
+</div>
+<h3 id="un-exemple-sur-trois-tours">Un exemple sur trois tours<a class="headerlink" href="#un-exemple-sur-trois-tours" title="Permanent link">&para;</a></h3>
+<p>Sam commence avec un profil <strong>vide</strong> : tous ses poids valent 1.</p>
+<ul>
+<li>Tour 1 : Sam like le post d'Inès (vidéo, musique, Inès). Liker : cible 2, vitesse 0,2.</li>
+<li>Tour 2 : Sam passe le post de Marie (photo, cuisine, Marie). Passer : cible 0,5, vitesse 0,2.</li>
+<li>Tour 3 : Sam like le post de Julie (vidéo, musique, Julie). Liker : cible 2, vitesse 0,2.</li>
+</ul>
+<p>Profil de Sam après le tour 2 :</p>
+<table>
+<thead>
+<tr>
+<th>Indice</th>
+<th>caractéristique</th>
+<th>valeur</th>
+<th>poids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>type</td>
+<td>vidéo</td>
+<td>1,2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>sujet</td>
+<td>musique</td>
+<td>1,2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>auteur</td>
+<td>Inès</td>
+<td>1,2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>type</td>
+<td>photo</td>
+<td>0,9</td>
+</tr>
+<tr>
+<td>4</td>
+<td>sujet</td>
+<td>cuisine</td>
+<td>0,9</td>
+</tr>
+<tr>
+<td>5</td>
+<td>auteur</td>
+<td>Marie</td>
+<td>0,9</td>
+</tr>
+</tbody>
+</table>
+<p>Tour 3 pas à pas (liker, donc cible = 2 et vitesse = 0,2) :</p>
+<table>
+<thead>
+<tr>
+<th>Caractéristique</th>
+<th>Valeur dans le post</th>
+<th>Ligne dans le profil</th>
+<th>Ancien poids</th>
+<th>Nouveau poids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>vidéo</td>
+<td>indice 0</td>
+<td>1,2</td>
+<td>0,8 × 1,2 + 0,2 × 2 = 1,36</td>
+</tr>
+<tr>
+<td>sujet</td>
+<td>musique</td>
+<td>indice 1</td>
+<td>1,2</td>
+<td>0,8 × 1,2 + 0,2 × 2 = 1,36</td>
+</tr>
+<tr>
+<td>auteur</td>
+<td>Julie</td>
+<td>absente : ajoutée à l'indice 6 avec 1</td>
+<td>1</td>
+<td>0,8 × 1 + 0,2 × 2 = 1,2</td>
+</tr>
+</tbody>
+</table>
+<p>Profil de Sam après le tour 3 : les lignes 0 et 1 valent 1,36, une ligne 6 (auteur, Julie, 1,2) est apparue, les autres n'ont pas changé.</p>
+<p>Une seule action change <strong>plusieurs</strong> poids à la fois : liker une vidéo de musique fait monter « vidéo » et « musique ».</p>
+<p>Si Sam avait <strong>commenté</strong> le post de Julie au lieu de le liker, « vidéo » serait monté plus haut : 0,7 × 1,2 + 0,3 × 2 = 0,84 + 0,6 = <strong>1,44</strong>. S'il l'avait seulement <strong>lu</strong>, il serait monté moins : 0,9 × 1,2 + 0,1 × 2 = 1,08 + 0,2 = <strong>1,28</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Pour aller plus loin : le temps passé sur un post</p>
+<p>Dans ce document, « lire » est une seule action, avec une seule vitesse. Les vraies applications mesurent beaucoup plus finement : le <strong>temps passé</strong> sur un post, une vidéo regardée jusqu'au bout ou revue, un post passé en moins d'une seconde.</p>
+<p>On pourrait donc choisir une vitesse qui dépend du temps passé : plus vous restez longtemps sur un post, plus la vitesse est grande. La règle de mise à jour resterait la même.</p>
+<p>Conséquence : l'application apprend vos goûts même si vous ne likez et ne commentez jamais rien. Il suffit de regarder.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exercice 7</p>
+<p>Noah commence avec un profil vide : tous ses poids valent 1. Utilisez le tableau des actions.</p>
+<ol>
+<li>Noah like le post de Karim (vidéo, sport). Calculez les nouveaux poids « vidéo » et « sport ».</li>
+<li>Noah passe ensuite le post de Léa (photo, voyage). Quels poids changent ? Calculez-les.</li>
+<li>Noah commente le post de Julie (vidéo, musique). Calculez les nouveaux poids « vidéo » et « musique ».</li>
+<li>Noah lit le post de Marie (photo, cuisine) sans réagir. Calculez le nouveau poids « photo ». Que remarquez-vous ?</li>
+<li>Avec la première idée (ajouter 0,1 à chaque like), combien vaudrait « vidéo » après 50 likes de vidéos ? Pourquoi est-ce un problème ?</li>
+</ol>
+</div>
+<div class="admonition important">
+<p class="admonition-title">À retenir</p>
+<ul>
+<li>Un profil appris est déduit des actions de la personne, pas de ce qu'elle déclare.</li>
+<li>Apprendre, c'est changer les poids après chaque action.</li>
+<li>nouveau poids = (1 − vitesse) × ancien poids + vitesse × cible. Les poids restent entre 0,5 et 2.</li>
+<li>La vitesse d'apprentissage dit à quel point une action change le profil. Elle dépend de l'action : commenter est un signal plus fort que liker, liker plus fort que lire.</li>
+</ul>
+</div>
+<hr />
+<h2 id="8-lalgorithme-est-il-neutre">8. L'algorithme est-il neutre ?<a class="headerlink" href="#8-lalgorithme-est-il-neutre" title="Permanent link">&para;</a></h2>
+<p>Dans la partie 6, on a calculé un fil à partir d'un profil. Dans la partie 7, on a mis à jour le profil après une action. Dans une vraie application, les deux tournent <strong>ensemble</strong>, encore et encore. Que se passe-t-il alors ? Regardons-le avec notre algorithme, qui est très simple.</p>
+<h3 id="une-boucle-de-retroaction">Une boucle de rétroaction<a class="headerlink" href="#une-boucle-de-retroaction" title="Permanent link">&para;</a></h3>
+<p>Le fil et le profil s'influencent l'un l'autre :</p>
+<ol>
+<li>le profil décide quels posts sont <strong>affichés</strong> ;</li>
+<li>la personne ne peut agir que sur les posts affichés ;</li>
+<li>ses actions changent le <strong>profil</strong> ;</li>
+<li>on revient à l'étape 1.</li>
+</ol>
+<p>C'est une <strong>boucle de rétroaction</strong> : le résultat de l'algorithme (le fil affiché) devient une donnée d'entrée de l'algorithme (les actions qui modifient le profil).</p>
+<h3 id="une-bulle-qui-se-referme">Une bulle qui se referme<a class="headerlink" href="#une-bulle-qui-se-referme" title="Permanent link">&para;</a></h3>
+<p>Quand une personne like un post, les poids de son type, de son sujet et de son auteur augmentent. Les posts qui partagent ces caractéristiques montent dans le fil. Ils sont donc plus visibles, et la personne a plus de chances de les liker à leur tour. Leurs poids augmentent encore.</p>
+<p>Les posts qui ne sont pas affichés, eux, ne peuvent recevoir aucune action : ni like, ni passage. Leurs poids ne changent pas. Pendant que les autres posts montent, eux restent sur place, et l'écart se creuse. Il devient de plus en plus difficile pour eux d'entrer dans le fil.</p>
+<p>La personne aime peut-être aussi ces posts qu'elle ne voit jamais. Elle ne le saura pas, et l'algorithme non plus : <strong>le profil n'apprend que ce qu'on lui montre</strong>.</p>
+<p>Une bulle se forme vite, mais elle se défait lentement : les posts déjà en tête ont pris beaucoup d'avance.</p>
+<h3 id="les-riches-deviennent-plus-riches">Les riches deviennent plus riches<a class="headerlink" href="#les-riches-deviennent-plus-riches" title="Permanent link">&para;</a></h3>
+<p>Le même effet touche les <strong>posts</strong>, pour tout le monde. Un post en tête des fils est vu par beaucoup de gens, donc il reçoit beaucoup de likes. Sa popularité augmente, et il reste en tête. Un post que personne ne voit ne reçoit aucun like : il reste en bas.</p>
+<p>C'est encore plus difficile pour un <strong>nouveau</strong> post. Il a peu de likes, donc un score faible, donc il apparaît dans peu de fils, donc il reçoit peu de likes.</p>
+<h3 id="la-bulle-de-filtre">La bulle de filtre<a class="headerlink" href="#la-bulle-de-filtre" title="Permanent link">&para;</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Bulle de filtre</p>
+<p>Une <strong>bulle de filtre</strong> est la situation où un fil personnalisé montre de plus en plus les mêmes types de posts, choisis à partir des actions passées de la personne, et de moins en moins le reste.</p>
+<p>Elle ne vient pas d'une règle précise. Elle naît de la boucle de rétroaction : le profil choisit ce qui est affiché, et seul ce qui est affiché peut modifier le profil.</p>
+</div>
+<h3 id="discussion-quelle-intention-derriere-lalgorithme">Discussion : quelle intention derrière l'algorithme ?<a class="headerlink" href="#discussion-quelle-intention-derriere-lalgorithme" title="Permanent link">&para;</a></h3>
+<h4 id="une-intention-et-ses-consequences">Une intention, et ses conséquences<a class="headerlink" href="#une-intention-et-ses-consequences" title="Permanent link">&para;</a></h4>
+<p>Aucune règle de notre algorithme ne dit « enfermer la personne ». Pourtant, la bulle se forme. D'où vient-elle ?</p>
+<p>Un algorithme n'a pas d'intention, mais ses concepteurs en ont. En écrivant le nôtre, nous avons voulu montrer ce qui est récent, ce qui plaît aux autres et surtout ce qui plaît à la personne. Toutes ces intentions poussent dans le même sens : vers ce qui plaît déjà. Aucune ne pousse vers autre chose. La bulle est la conséquence de ce choix.</p>
+<h4 id="on-ne-mesure-pas-les-gouts-on-les-suppose">On ne mesure pas les goûts, on les suppose<a class="headerlink" href="#on-ne-mesure-pas-les-gouts-on-les-suppose" title="Permanent link">&para;</a></h4>
+<p>L'algorithme ne peut pas connaître les goûts d'une personne : ils sont dans sa tête. Il ne voit que ses <strong>actions</strong>. Il utilise donc ces actions comme <strong>indicateurs</strong>.</p>
+<p>Un <strong>indicateur</strong> est une donnée qu'on peut mesurer, utilisée à la place de ce qu'on veut vraiment connaître. Utiliser un indicateur, c'est faire une <strong>supposition</strong>, et une supposition peut être fausse.</p>
+<table>
+<thead>
+<tr>
+<th>Action mesurée</th>
+<th>Ce qu'on suppose</th>
+<th>Ce qui peut être vrai à la place</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>liker</td>
+<td>la personne aime ce post</td>
+<td>elle like par politesse, pour faire plaisir à un ami</td>
+</tr>
+<tr>
+<td>commenter</td>
+<td>elle est très intéressée</td>
+<td>elle n'est pas d'accord, ou elle est en colère</td>
+</tr>
+<tr>
+<td>lire</td>
+<td>elle est un peu intéressée</td>
+<td>elle est fascinée, mal à l'aise, ou distraite</td>
+</tr>
+<tr>
+<td>passer</td>
+<td>ça ne l'intéresse pas</td>
+<td>elle est pressée, ou elle l'a déjà vu</td>
+</tr>
+</tbody>
+</table>
+<p>Ces erreurs ne sont pas des détails. L'algorithme cherche à faire monter ses indicateurs, pas les vrais goûts. Un post qui met mal à l'aise peut retenir l'attention, donc compter comme « intéressant ». À force, le fil peut se remplir de posts qui retiennent, sans forcément plaire.</p>
+<h4 id="dautres-objectifs-dautres-regles">D'autres objectifs, d'autres règles<a class="headerlink" href="#dautres-objectifs-dautres-regles" title="Permanent link">&para;</a></h4>
+<p>On aurait pu concevoir l'algorithme avec d'autres objectifs. Chacun mène à d'autres règles, et chacun a un prix :</p>
+<table>
+<thead>
+<tr>
+<th>Objectif</th>
+<th>Règle possible</th>
+<th>Prix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Faire plaisir à la personne</td>
+<td>favoriser son profil (l'affinité)</td>
+<td>la bulle de filtre</td>
+</tr>
+<tr>
+<td>Montrer ce qui plaît au plus grand nombre</td>
+<td>favoriser la popularité</td>
+<td>les riches deviennent plus riches</td>
+</tr>
+<tr>
+<td>Amener de la diversité</td>
+<td>réserver une place du fil à un post choisi au hasard, hors du profil</td>
+<td>le fil semble moins « parfait »</td>
+</tr>
+<tr>
+<td>Être juste envers les nouveaux créateurs</td>
+<td>donner une popularité minimale aux posts récents</td>
+<td>des posts sans intérêt passent parfois devant</td>
+</tr>
+<tr>
+<td>Éviter qu'un seul goût écrase les autres</td>
+<td>empêcher les poids de dépasser une limite (2 dans notre algorithme)</td>
+<td>ralentit la bulle, mais ne l'empêche pas</td>
+</tr>
+<tr>
+<td>Ne pas enfermer la personne dans ses goûts passés</td>
+<td>oublier peu à peu : ramener lentement tous les poids vers 1</td>
+<td>le profil retient moins bien les vrais goûts</td>
+</tr>
+<tr>
+<td>Laisser la personne décider</td>
+<td>lui montrer son profil et la laisser le modifier</td>
+<td>peu de gens le font vraiment</td>
+</tr>
+<tr>
+<td>Retenir la personne le plus longtemps possible</td>
+<td>donner beaucoup de poids au temps passé sur un post</td>
+<td>retenir n'est pas forcément faire plaisir</td>
+</tr>
+</tbody>
+</table>
+<p>Ces objectifs entrent souvent en conflit. Retenir quelqu'un, ce n'est pas forcément lui faire plaisir. Lui montrer ce qu'il aime déjà, ce n'est pas l'aider à découvrir. Concevoir un algorithme, c'est choisir des objectifs, et en sacrifier d'autres.</p>
+<div class="admonition important">
+<p class="admonition-title">Aucun algorithme n'est neutre</p>
+<p>Un algorithme traduit les objectifs choisis par ses concepteurs, et la façon dont ils ont décidé de les mesurer. Il produit aussi des effets qu'ils n'ont pas voulus. Ne rien prévoir contre ces effets est encore un choix.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exercice 8</p>
+<ol>
+<li>Dessinez la boucle de rétroaction avec quatre cases : profil, fil affiché, actions, mise à jour du profil.</li>
+<li>Expliquez avec vos mots pourquoi un post qui n'est jamais affiché ne peut pas monter dans le fil.</li>
+<li>Pourquoi un nouveau post a-t-il du mal à entrer dans les fils ? Quelle règle du tableau des objectifs corrige ce problème ?</li>
+<li>Pourquoi une bulle se forme-t-elle vite, mais se défait-elle lentement ?</li>
+<li>Choisissez une action (liker, commenter, lire ou passer). Donnez une situation où ce qu'on suppose est vrai, et une situation où c'est faux.</li>
+<li>Choisissez un objectif du tableau, autre que « faire plaisir à la personne ». Donnez un avantage et un inconvénient pour la personne qui utilise le réseau.</li>
+</ol>
+</div>
+<div class="admonition important">
+<p class="admonition-title">À retenir</p>
+<ul>
+<li>Dans une boucle de rétroaction, le résultat de l'algorithme devient une de ses données d'entrée.</li>
+<li>Le profil n'apprend que ce qu'on lui montre : ce qui n'est jamais affiché ne peut pas recevoir d'action, et ses poids ne changent plus.</li>
+<li>Une bulle de filtre naît de la boucle, pas d'une règle précise. Les posts déjà populaires deviennent encore plus populaires, et les nouveaux posts ont du mal à se faire voir.</li>
+<li>L'algorithme ne mesure pas les goûts : il les suppose à partir d'actions, qui sont des indicateurs imparfaits.</li>
+<li>Chaque objectif mène à d'autres règles, et a un prix. Aucun algorithme n'est neutre : il reflète les objectifs de ses concepteurs, y compris ceux qu'ils ont oubliés.</li>
+</ul>
+</div>
+<h3 id="dans-les-vrais-reseaux">Dans les vrais réseaux<a class="headerlink" href="#dans-les-vrais-reseaux" title="Permanent link">&para;</a></h3>
+<p>Notre algorithme est très simple. Les vrais réseaux reprennent les mêmes idées (un profil, un score, une boucle), mais à une tout autre échelle. Cela ouvre de nouvelles questions.</p>
+<h4 id="beaucoup-plus-dindicateurs">Beaucoup plus d'indicateurs<a class="headerlink" href="#beaucoup-plus-dindicateurs" title="Permanent link">&para;</a></h4>
+<p>Notre algorithme observe 4 actions. Un vrai réseau en observe des centaines : le temps passé sur chaque post, une vidéo regardée jusqu'au bout ou revue, la vitesse de défilement, les partages, les recherches, l'heure de connexion, les comptes suivis… Ce sont surtout des données collectées <strong>indirectement</strong> (partie 1) : la personne ne les donne pas, l'application les observe.</p>
+<p>Avec plus d'indicateurs, le profil devient plus précis. Mais chaque indicateur reste une <strong>supposition</strong>. Avoir beaucoup de suppositions ne les rend pas vraies.</p>
+<p>Le profil change aussi de nature. Dans notre algorithme, on peut le lire : « vidéo : 1,4 ». Dans un vrai réseau, il contient des milliers de nombres, souvent calculés par la machine elle-même, et il n'est plus lisible aussi simplement.</p>
+<h4 id="leconomie-de-lattention">L'économie de l'attention<a class="headerlink" href="#leconomie-de-lattention" title="Permanent link">&para;</a></h4>
+<p>La plupart des réseaux sont gratuits. Ils gagnent surtout de l'argent en montrant de la <strong>publicité</strong>. Plus vous restez longtemps, plus ils peuvent vous montrer de publicités, et plus ils gagnent d'argent. Votre <strong>attention</strong> devient donc une ressource qu'ils vendent aux annonceurs. On parle d'<strong>économie de l'attention</strong>.</p>
+<p>Dans ce modèle, l'objectif « retenir la personne le plus longtemps possible » prend une grande place. Les indicateurs les plus importants deviennent ceux qui mesurent l'attention, comme le temps passé, plutôt que ceux qui mesurent le plaisir. Et l'application elle-même est conçue pour retenir : défilement sans fin, vidéos qui s'enchaînent seules, notifications.</p>
+<p>D'autres modèles existent : des réseaux financés par un abonnement, ou sans but lucratif. Ils peuvent se donner d'autres objectifs, et donc d'autres règles.</p>
+<h4 id="des-bulles-tres-differentes">Des bulles très différentes<a class="headerlink" href="#des-bulles-tres-differentes" title="Permanent link">&para;</a></h4>
+<p>Une bulle de filtre n'a pas toujours les mêmes conséquences. Tout dépend de ce qui se répète dans le fil, et de la personne qui le regarde.</p>
+<table>
+<thead>
+<tr>
+<th>Bulle de…</th>
+<th>Ce qui se répète</th>
+<th>Enjeu possible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>loisirs</td>
+<td>toujours le même sport, la même musique</td>
+<td>on découvre moins de choses nouvelles</td>
+</tr>
+<tr>
+<td>information</td>
+<td>toujours les mêmes sources, les mêmes opinions</td>
+<td>on connaît moins les autres points de vue, le débat devient plus difficile</td>
+</tr>
+<tr>
+<td>image de soi</td>
+<td>toujours les mêmes corps, les mêmes modes de vie, les mêmes influenceurs</td>
+<td>on se compare sans arrêt, ce qui peut peser sur la confiance en soi</td>
+</tr>
+<tr>
+<td>consommation</td>
+<td>toujours les mêmes produits, les mêmes publicités</td>
+<td>on est poussé à acheter</td>
+</tr>
+</tbody>
+</table>
+<p>Une bulle n'est pas toujours mauvaise : recevoir des posts sur ce qu'on aime peut être agréable et utile. La question est de savoir si l'on garde la possibilité d'en sortir, et si l'on sait qu'on est dedans.</p>
+<h4 id="la-spirale">La spirale<a class="headerlink" href="#la-spirale" title="Permanent link">&para;</a></h4>
+<p>Dans certains cas, le fil ne se contente pas de répéter : il propose des posts <strong>de plus en plus forts</strong> dans la même direction. On parle de <strong>spirale</strong> (en anglais, « rabbit hole », le terrier du lapin, dans lequel on glisse de plus en plus profond).</p>
+<p>Le mécanisme combine deux choses déjà vues :</p>
+<ul>
+<li>le fil propose des posts <strong>proches</strong> de ceux qui ont retenu l'attention ;</li>
+<li>les posts plus forts, plus surprenants ou plus choquants retiennent souvent <strong>plus</strong> l'attention, donc ils comptent comme plus « intéressants ».</li>
+</ul>
+<p>À chaque tour, le fil s'éloigne donc un peu plus du point de départ. Une personne qui regarde quelques vidéos sur un régime peut ainsi recevoir des vidéos de plus en plus extrêmes sur la nourriture ou le corps, sans jamais les avoir cherchées.</p>
+<p>Notre algorithme ne fait pas cela : il répète, mais il n'aggrave pas. Ses poids sont plafonnés à 2, et il ne connaît pas l'« intensité » d'un post. Un vrai réseau, qui mesure finement l'attention, peut glisser dans une spirale sans qu'aucune règle ne le demande.</p>
+<h4 id="qui-decide">Qui décide ?<a class="headerlink" href="#qui-decide" title="Permanent link">&para;</a></h4>
+<p>Les règles d'un fil sont choisies par l'<strong>entreprise</strong> qui le conçoit. Elle fixe les objectifs, les indicateurs, les poids. Ces choix dépendent de son modèle économique, et ils sont en général gardés <strong>secrets</strong>.</p>
+<p>Les entreprises ne décident pas seules. Dans l'Union européenne, le <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R2065">règlement sur les services numériques</a> oblige les très grands réseaux à proposer au moins un fil qui n'est pas construit à partir de votre profil, et à évaluer les risques de leurs algorithmes, en particulier pour les mineurs. La Suisse n'applique pas ce règlement, mais les réseaux utilisés en Suisse sont les mêmes.</p>
+<p>La personne qui utilise le réseau a aussi un peu de pouvoir : choisir un fil classé par date quand il existe, suivre d'autres comptes, signaler qu'un contenu ne l'intéresse pas, réfléchir au temps passé. Ce pouvoir est réel, mais limité : elle agit toujours dans le cadre que l'entreprise a construit.</p>
+<div class="admonition important">
+<p class="admonition-title">Le score est un choix (suite)</p>
+<p>Un algorithme de recommandation n'est pas neutre. Dans un vrai réseau, ses objectifs dépendent aussi du modèle économique de l'entreprise et des lois. Et en apprenant de vous, il change ce que vous verrez demain.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exercice 9</p>
+<ol>
+<li>Citez trois indicateurs qu'un vrai réseau peut observer et que notre algorithme n'observe pas. Pour chacun, dites ce qu'on suppose, et donnez une situation où la supposition est fausse.</li>
+<li>Expliquez avec vos mots ce qu'est l'économie de l'attention. Quel objectif du tableau des objectifs favorise-t-elle ?</li>
+<li>Choisissez un type de bulle du tableau. Donnez un exemple que vous pourriez rencontrer, et dites pourquoi cette bulle peut poser problème.</li>
+<li>Expliquez la différence entre une bulle et une spirale. Pourquoi notre algorithme ne produit-il pas de spirale ?</li>
+<li>Une bulle est-elle toujours mauvaise ? Donnez un argument pour et un argument contre.</li>
+<li>Qui devrait décider des règles de votre fil : l'entreprise, la loi, vous ? Donnez un avantage et un risque pour chacun.</li>
+</ol>
+</div>
+<div class="admonition important">
+<p class="admonition-title">À retenir</p>
+<ul>
+<li>Les vrais réseaux observent des centaines d'indicateurs, surtout indirects. Chacun reste une supposition.</li>
+<li>Dans l'économie de l'attention, le réseau gagne de l'argent avec le temps que vous passez : l'objectif « retenir » prend une grande place.</li>
+<li>Les bulles n'ont pas toutes les mêmes enjeux : loisirs, information, image de soi, consommation. Leurs effets dépendent de ce qui se répète et de la personne.</li>
+<li>Dans une spirale, le fil ne répète pas seulement : il propose des posts de plus en plus forts.</li>
+<li>Les règles sont choisies par l'entreprise, encadrées en partie par la loi. La personne a un pouvoir réel, mais limité.</li>
+</ul>
+</div>
+<hr />
+<h2 id="lexique">Lexique<a class="headerlink" href="#lexique" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Mot</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Affinité</strong></td>
+<td>Le produit des poids du profil qui correspondent à un post.</td>
+</tr>
+<tr>
+<td><strong>Apprendre</strong></td>
+<td>Changer les poids du profil après chaque action de la personne.</td>
+</tr>
+<tr>
+<td><strong>Bonus</strong></td>
+<td>Des points ajoutés au score, seulement si une condition est vraie.</td>
+</tr>
+<tr>
+<td><strong>Boucle de rétroaction</strong></td>
+<td>Situation où le résultat d'un algorithme devient une de ses données d'entrée.</td>
+</tr>
+<tr>
+<td><strong>Bulle de filtre</strong></td>
+<td>Un fil qui se referme peu à peu sur les mêmes types de posts.</td>
+</tr>
+<tr>
+<td><strong>Classement</strong></td>
+<td>Mettre les posts dans un ordre, en les comparant entre eux.</td>
+</tr>
+<tr>
+<td><strong>Clé</strong></td>
+<td>Le nom d'une information dans une fiche (ex. « likes »).</td>
+</tr>
+<tr>
+<td><strong>Condition</strong></td>
+<td>Une question à laquelle on répond oui ou non, qui décide de ce qu'on fait ensuite.</td>
+</tr>
+<tr>
+<td><strong>Critère</strong></td>
+<td>Ce qu'on regarde pour décider (ex. le nombre de likes).</td>
+</tr>
+<tr>
+<td><strong>Donnée</strong></td>
+<td>Une information qu'une application peut connaître.</td>
+</tr>
+<tr>
+<td><strong>Économie de l'attention</strong></td>
+<td>Modèle où un réseau gagne de l'argent avec le temps que les personnes y passent, surtout grâce à la publicité.</td>
+</tr>
+<tr>
+<td><strong>Exploration</strong></td>
+<td>Montrer des posts hors du profil, pour lui permettre d'évoluer.</td>
+</tr>
+<tr>
+<td><strong>Fiche</strong></td>
+<td>L'ensemble des paires clé-valeur qui décrivent une même chose.</td>
+</tr>
+<tr>
+<td><strong>Filtrer</strong></td>
+<td>Garder seulement les fiches qui répondent oui à une règle.</td>
+</tr>
+<tr>
+<td><strong>Fraîcheur</strong></td>
+<td>Un nombre entre 0 et 1 qui fait baisser le score des vieux posts.</td>
+</tr>
+<tr>
+<td><strong>Indicateur</strong></td>
+<td>Une donnée qu'on peut mesurer, utilisée à la place de ce qu'on veut vraiment connaître.</td>
+</tr>
+<tr>
+<td><strong>Indice</strong></td>
+<td>La position d'une fiche dans un tableau. Le premier indice est 0.</td>
+</tr>
+<tr>
+<td><strong>Parcourir</strong></td>
+<td>Prendre les fiches d'un tableau une par une, pour leur appliquer la même règle.</td>
+</tr>
+<tr>
+<td><strong>Pénalité</strong></td>
+<td>Des points enlevés au score.</td>
+</tr>
+<tr>
+<td><strong>Pertinence</strong></td>
+<td>Le fait qu'une donnée soit utile ou non pour un problème donné.</td>
+</tr>
+<tr>
+<td><strong>Poids</strong></td>
+<td>Le nombre qui dit combien un critère compte dans le score.</td>
+</tr>
+<tr>
+<td><strong>Polarisation</strong></td>
+<td>L'écart entre les opinions de groupes opposés.</td>
+</tr>
+<tr>
+<td><strong>Popularité</strong></td>
+<td>La partie du score calculée avec les likes et les commentaires.</td>
+</tr>
+<tr>
+<td><strong>Priorité</strong></td>
+<td>L'ordre dans lequel on applique les critères.</td>
+</tr>
+<tr>
+<td><strong>Profil</strong></td>
+<td>Un tableau de fiches (caractéristique, valeur, poids) qui décrit les goûts d'une personne. Une valeur absente a le poids 1.</td>
+</tr>
+<tr>
+<td><strong>Règle</strong></td>
+<td>Ce qui dit comment choisir les posts.</td>
+</tr>
+<tr>
+<td><strong>Score de base</strong></td>
+<td>Popularité × fraîcheur : la partie du score qui est la même pour tout le monde.</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td>Un nombre calculé pour chaque post, qui sert à les classer.</td>
+</tr>
+<tr>
+<td><strong>Spirale</strong></td>
+<td>Un fil qui propose des posts de plus en plus forts dans la même direction (en anglais, « rabbit hole »).</td>
+</tr>
+<tr>
+<td><strong>Tableau</strong></td>
+<td>Plusieurs fiches rangées dans un ordre.</td>
+</tr>
+<tr>
+<td><strong>Valeur</strong></td>
+<td>L'information associée à une clé (ex. 42).</td>
+</tr>
+<tr>
+<td><strong>Vitesse d'apprentissage</strong></td>
+<td>Le nombre qui dit à quel point une action change le profil. Il dépend de l'action : commenter, liker, lire ou passer.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
